@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -23,4 +23,234 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#menus ul li a {
+  font-family: Industry, sans-serif;
+  font-weight: 400;
+  font-size: 18px !important;
+}
+
+#menus ul li {
+  border-left: none !important;
+  margin-right: 10px;
+  font-weight: 100;
+}
+
+.navbar-brand {
+  left: 0 !important;
+}
+
+.soicon {
+  gap: 3px !important;
+  display: flex !important;
+}
+
+.page-loader {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#caption_list {
+  color: #ffd538;
+  text-transform: uppercase;
+}
+
+.slick-dots {
+  display: block !important;
+  margin-bottom: 63px !important;
+}
+
+.slick-dots li {
+  width: 23% !important;
+  height: 20px !important;
+  background: rgb(255 255 255 / 36%) !important;
+  text-indent: -99999px !important;
+  border-bottom: solid 4px #fff !important;
+  position: static !important;
+}
+
+.slick-dots li button {
+  width: 100% !important;
+}
+
+.slick-dots li button:before {
+  display: none;
+}
+
+.DYBOXING_TRAINING_text {
+  text-transform: uppercase !important;
+}
+
+.slick-active button {
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 110, 20, 0) 0,
+    #ffd538 100%
+  ) !important;
+  border-bottom: solid 3px #ffd538 !important;
+}
+
+.news_data .box-img img {
+  width: 80% !important;
+  height: 90% !important;
+}
+
+.social-share-block {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1% !important;
+}
+
+.social-share-block .social-icons {
+  display: flex !important;
+}
+
+.social-sharing-info span {
+  font-size: unset !important;
+}
+
+@media (max-width: 781px) {
+  .low-menu {
+    display: inline-block !important;
+  }
+
+  .slick-slide img {
+    height: 100% !important;
+  }
+
+  .slick-dots {
+    display: flex !important;
+  }
+
+  #podcost_header .slick-arrow {
+    display: block !important;
+  }
+}
+
+@media (min-width: 780px) {
+  .low-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 1079px) {
+  .red-menu {
+    display: block;
+  }
+
+  #main_menu_list {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1079px) {
+  .red-menu {
+    display: none;
+  }
+
+  #main_menu_list {
+    display: block;
+  }
+}
+
+#bottom_footer ul li a:link,
+#bottom_footer ul li a:visited {
+  color: #fff !important;
+}
+
+.hvr-bounce-out {
+  transition: transform 0.2s;
+}
+
+.hvr-bounce-out:hover {
+  transform: scale(2.5) !important;
+}
+
+.default {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.bold_text {
+  font-weight: 700;
+  font-size: 80px;
+}
+
+.font_famali {
+  font-family: monospace;
+  font-size: 30px;
+}
+
+.expl {
+  font-family: GoboldUplow;
+}
+
+@media screen and (min-width: 768px) {
+  #msite-header .hdr-social-icons a i {
+    font-size: 24px;
+    height: 32px;
+    width: 34px;
+  }
+}
+
+.bgwhite {
+  background-color: #fff;
 }

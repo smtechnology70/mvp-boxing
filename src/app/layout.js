@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,10 +21,134 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>
+          MVPs BOXING | MMA News | Boxing Training | Promotions | Online
+          Training
+        </title>
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossOrigin="anonymous"
+        />
+
+        <link
+          rel="stylesheet"
+          href="path/to/font-awesome/css/font-awesome.min.css"
+        />
+
+        <link rel="stylesheet" href="assets/css/template.min.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/mstyle.min.css" />
+        <link rel="stylesheet" href="assets/css/style-trainning.css" />
+        <link rel="stylesheet" href="assets/css/custom-style.css" />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="assets/css/jquery-comments.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+        />
+
+        <script
+          async
+          type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"
+        ></script>
+        <script
+          async
+          type="text/javascript"
+          src="js/jquery-comments.js"
+        ></script>
+        <script
+          async
+          src="https://kit.fontawesome.com/05ec704b29.js"
+          crossorigin="anonymous"
+        ></script>
+        <link
+          rel="stylesheet"
+          href="https://www.mvpboxing.com/assets/css/style-trainning.css"
+        />
+
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="assets/css/fa6all.min.css"
+          category="default"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="assets/css/v4-shims.min.css"
+          category="default"
+          media="all"
+        />
+
+        <script
+          async
+          src="assets/js/scriptloader-enquire-lazysizes.min.js?v=20220823.00"
+        ></script>
+
+        {/* <script>
+      var base_url = "https://www.mvpboxing.com/",
+        route = "mvp/index",
+        comments_enabled = "false",
+        sharing = "false",
+        version = "20220823.00",
+        id = parseInt("0");
+    </script> */}
+        {/* <script>
+      !(function () {
+        var e,
+          t,
+          a = document,
+          r = a.getElementById,
+          s = a.createElement,
+          c = a.getElementsByTagName,
+          m = "typef_orm";
+        r.call(a, m) ||
+          (((e = s.call(a, "script")).id = m),
+          (e.src =
+            "https://s3-eu-west-1.amazonaws.com/share.typeform.com/share.js"),
+          (t = c.call(a, "script")[0]).parentNode.insertBefore(e, t));
+      })();
+    </script>
+    <script>
+      !(function (t, e, r) {
+        var n,
+          s = t.getElementsByTagName(e)[0],
+          i = /^http:/.test(t.location) ? "http" : "https";
+        t.getElementById(r) ||
+          (((n = t.createElement(e)).id = r),
+          (n.src = i + "://platform.twitter.com/widgets.js"),
+          s.parentNode.insertBefore(n, s));
+      })(document, "script", "twitter-wjs");
+    </script>
+    <script>
+      !(function (t, e, r) {
+        var n,
+          s = t.getElementsByTagName(e)[0],
+          i = /^http:/.test(t.location) ? "http" : "https";
+        t.getElementById(r) ||
+          (((n = t.createElement(e)).id = r),
+          (n.src = i + "://platform.twitter.com/widgets.js"),
+          s.parentNode.insertBefore(n, s));
+      })(document, "script", "twitter-wjs");
+    </script> */}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
