@@ -87,8 +87,15 @@ export default function RootLayout({ children }) {
 
         <script
           async
-          src="assets/js/scriptloader-enquire-lazysizes.min.js?v=20220823.00"
+          src="/assets/js/scriptloader-enquire-lazysizes.min.js?v=20220823.00"
         ></script>
+        <script
+          async
+          type="text/javascript"
+          src="/assets/js/mscript.js"
+          category="default"
+        ></script>
+        <script async src="/assets/js/jquery-bs-popper.min.js"></script>
 
         {/* <script>
       var base_url = "https://www.mvpboxing.com/",
