@@ -27,28 +27,22 @@ export default function RootLayout({ children }) {
           Training
         </title>
 
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
           crossOrigin="anonymous"
         />
-
-        <link
-          rel="stylesheet"
-          href="path/to/font-awesome/css/font-awesome.min.css"
-        />
-
-        <link rel="stylesheet" href="assets/css/template.min.css" />
-        <link rel="stylesheet" href="assets/css/style.css" />
-        <link rel="stylesheet" href="assets/css/mstyle.min.css" />
-        <link rel="stylesheet" href="assets/css/style-trainning.css" />
-        <link rel="stylesheet" href="assets/css/custom-style.css" />
+        <link rel="stylesheet" href="/assets/css/template.min.css" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/mstyle.min.css" />
+        <link rel="stylesheet" href="/assets/css/style-trainning.css" />
+        <link rel="stylesheet" href="/assets/css/custom-style.css" />
         <link
           rel="stylesheet"
           type="text/css"
-          href="assets/css/jquery-comments.css"
+          href="/assets/css/jquery-comments.css"
         />
         <link
           rel="stylesheet"
@@ -79,14 +73,14 @@ export default function RootLayout({ children }) {
         <link
           rel="stylesheet"
           type="text/css"
-          href="assets/css/fa6all.min.css"
+          href="/assets/css/fa6all.min.css"
           category="default"
           media="all"
         />
         <link
           rel="stylesheet"
           type="text/css"
-          href="assets/css/v4-shims.min.css"
+          href="/assets/css/v4-shims.min.css"
           category="default"
           media="all"
         />
