@@ -48,29 +48,31 @@ export default function Sliders() {
   return (
     <>
       <Loader />
-      <Slider {...settings}>
-        {sliders.map((item, i) => {
-          return (
-            <div key={i}>
-              <img
-                data-src={item.image}
-                className="img-fluid d-show ls-is-cached lazyloaded"
-                id="s3"
-                src={item.image}
-              />
-              <div
-                id="caption-list"
-                className="bg-button slick-caption s2 d-show"
-              >
-                <p
-                  id="caption_list"
-                  className="caption text-truncate p-1 mb-0"
-                >{`"${item.title}"`}</p>
+      {typeof Slider === "function" && (
+        <Slider {...settings}>
+          {sliders.map((item, i) => {
+            return (
+              <div key={i}>
+                <img
+                  data-src={item.image}
+                  className="img-fluid d-show ls-is-cached lazyloaded"
+                  id="s3"
+                  src={item.image}
+                />
+                <div
+                  id="caption-list"
+                  className="bg-button slick-caption s2 d-show"
+                >
+                  <p
+                    id="caption_list"
+                    className="caption text-truncate p-1 mb-0"
+                  >{`"${item.title}"`}</p>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </Slider>
+            );
+          })}
+        </Slider>
+      )}
     </>
   );
 }

@@ -74,190 +74,201 @@ const Podcast = (props) => {
           <a href="#">PODCASTS</a>
         </div>
       </header>
-      <Slider {...settings}>
-        <div>
-          <div className="podcost_contend_box">
-            <div className="podcost_contend_box_main">
-              <div className="podcost_contend_left">
-                <HoverPrefetchLink
-                  target="_blank"
-                  className="Link"
-                  href="https://open.spotify.com/show/6mEX6mQ7RlA6jnNwEy4XN0"
-                >
-                  <img className="podcost_img" src={"assets/images/pp1.jpg"} />
-                </HoverPrefetchLink>
-              </div>
-              <div className="podcost_contend_right">
-                <div className="podcost_contend_right_title">
+      {typeof Slider === "function" && (
+        <Slider {...settings}>
+          <div>
+            <div className="podcost_contend_box">
+              <div className="podcost_contend_box_main">
+                <div className="podcost_contend_left">
                   <HoverPrefetchLink
                     target="_blank"
-                    className="podcost_contend_right_title_Link"
+                    className="Link"
                     href="https://open.spotify.com/show/6mEX6mQ7RlA6jnNwEy4XN0"
                   >
-                    THE FIGHT
+                    <img
+                      className="podcost_img"
+                      src={"assets/images/pp1.jpg"}
+                    />
                   </HoverPrefetchLink>
                 </div>
-                <div className="podcost_contend_right_description">
-                  <span className="podcost_contend_right_span">
-                    Hall of Fame boxing commentator and trainer to 18 world
-                    champion fighters, Teddy Atlas shares his views on all
-                    things boxing. In addition to giving fight analysis,
-                    predictions, and a look at what’s happening behind the
-                    scenes in the boxing world, Teddy connects the tenets and
-                    lessons learned inside the ring to broader application in
-                    life. Hosted on Acast. See for more information.
-                  </span>
-                </div>
-                <div className="podcost_contend_right_ctaLink">
-                  <HoverPrefetchLink
-                    target="_blank"
-                    className="Pill-button-with-graphics"
-                    href="https://open.spotify.com/show/6mEX6mQ7RlA6jnNwEy4XN0"
-                  >
-                    Listen here
-                  </HoverPrefetchLink>
+                <div className="podcost_contend_right">
+                  <div className="podcost_contend_right_title">
+                    <HoverPrefetchLink
+                      target="_blank"
+                      className="podcost_contend_right_title_Link"
+                      href="https://open.spotify.com/show/6mEX6mQ7RlA6jnNwEy4XN0"
+                    >
+                      THE FIGHT
+                    </HoverPrefetchLink>
+                  </div>
+                  <div className="podcost_contend_right_description">
+                    <span className="podcost_contend_right_span">
+                      Hall of Fame boxing commentator and trainer to 18 world
+                      champion fighters, Teddy Atlas shares his views on all
+                      things boxing. In addition to giving fight analysis,
+                      predictions, and a look at what’s happening behind the
+                      scenes in the boxing world, Teddy connects the tenets and
+                      lessons learned inside the ring to broader application in
+                      life. Hosted on Acast. See for more information.
+                    </span>
+                  </div>
+                  <div className="podcost_contend_right_ctaLink">
+                    <HoverPrefetchLink
+                      target="_blank"
+                      className="Pill-button-with-graphics"
+                      href="https://open.spotify.com/show/6mEX6mQ7RlA6jnNwEy4XN0"
+                    >
+                      Listen here
+                    </HoverPrefetchLink>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div>
-          <div className="podcost_contend_box">
-            <div className="podcost_contend_box_main">
-              <div className="podcost_contend_left">
-                <HoverPrefetchLink
-                  target="_blank"
-                  className="Link"
-                  href="https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk"
-                >
-                  <img className="podcost_img" src={"assets/images/pp2.jpg"} />
-                </HoverPrefetchLink>
-              </div>
-              <div className="podcost_contend_right">
-                <div className="podcost_contend_right_title">
+          <div>
+            <div className="podcost_contend_box">
+              <div className="podcost_contend_box_main">
+                <div className="podcost_contend_left">
                   <HoverPrefetchLink
                     target="_blank"
-                    className="podcost_contend_right_title_Link"
+                    className="Link"
                     href="https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk"
                   >
-                    THE JOE ROGAN EXPERIENCE
+                    <img
+                      className="podcost_img"
+                      src={"assets/images/pp2.jpg"}
+                    />
                   </HoverPrefetchLink>
                 </div>
-                <div className="podcost_contend_right_description">
-                  <span className="podcost_contend_right_span">
-                    The official podcast of comedian Joe Rogan.
-                  </span>
-                </div>
-                <div className="podcost_contend_right_ctaLink">
-                  <HoverPrefetchLink
-                    target="_blank"
-                    className="Pill-button-with-graphics"
-                    href="https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk"
-                  >
-                    Listen here
-                  </HoverPrefetchLink>
+                <div className="podcost_contend_right">
+                  <div className="podcost_contend_right_title">
+                    <HoverPrefetchLink
+                      target="_blank"
+                      className="podcost_contend_right_title_Link"
+                      href="https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk"
+                    >
+                      THE JOE ROGAN EXPERIENCE
+                    </HoverPrefetchLink>
+                  </div>
+                  <div className="podcost_contend_right_description">
+                    <span className="podcost_contend_right_span">
+                      The official podcast of comedian Joe Rogan.
+                    </span>
+                  </div>
+                  <div className="podcost_contend_right_ctaLink">
+                    <HoverPrefetchLink
+                      target="_blank"
+                      className="Pill-button-with-graphics"
+                      href="https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk"
+                    >
+                      Listen here
+                    </HoverPrefetchLink>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div>
-          <div className="podcost_contend_box">
-            <div className="podcost_contend_box_main">
-              <div className="podcost_contend_left">
-                <HoverPrefetchLink
-                  target="_blank"
-                  className="Link"
-                  href="https://open.spotify.com/show/0e5hWNp8cvtzuM0vPOY0OD"
-                >
-                  <img className="podcost_img" src={"assets/images/pp3.jpg"} />
-                </HoverPrefetchLink>
-              </div>
-              <div className="podcost_contend_right">
-                <div className="podcost_contend_right_title">
+          <div>
+            <div className="podcost_contend_box">
+              <div className="podcost_contend_box_main">
+                <div className="podcost_contend_left">
                   <HoverPrefetchLink
                     target="_blank"
-                    className="podcost_contend_right_title_Link"
+                    className="Link"
                     href="https://open.spotify.com/show/0e5hWNp8cvtzuM0vPOY0OD"
                   >
-                    WORTH A LISTEN
+                    <img
+                      className="podcost_img"
+                      src={"assets/images/pp3.jpg"}
+                    />
                   </HoverPrefetchLink>
                 </div>
-                <div className="podcost_contend_right_description">
-                  <span className="podcost_contend_right_span">
-                    Travel can do amazing things: broaden horizons, build
-                    relationships, and rejuvenate the soul. But often, those
-                    experiences come at a cost. This is Peak Travel, a new
-                    podcast from WHYY about how travel shapes communities in
-                    hot-spots around the world. We’ll share the wonder that
-                    comes with exploring new places, as well as the harm that
-                    our worst travel habits can cause. And we’ll try to figure
-                    out how we can do it better. Each episode transports you to
-                    a new destination. You’ll meet the people who call that
-                    place home, hear their stories.
-                  </span>
-                </div>
-                <div className="podcost_contend_right_ctaLink">
-                  <HoverPrefetchLink
-                    target="_blank"
-                    className="Pill-button-with-graphics"
-                    href="https://open.spotify.com/show/0e5hWNp8cvtzuM0vPOY0OD"
-                  >
-                    Listen here
-                  </HoverPrefetchLink>
+                <div className="podcost_contend_right">
+                  <div className="podcost_contend_right_title">
+                    <HoverPrefetchLink
+                      target="_blank"
+                      className="podcost_contend_right_title_Link"
+                      href="https://open.spotify.com/show/0e5hWNp8cvtzuM0vPOY0OD"
+                    >
+                      WORTH A LISTEN
+                    </HoverPrefetchLink>
+                  </div>
+                  <div className="podcost_contend_right_description">
+                    <span className="podcost_contend_right_span">
+                      Travel can do amazing things: broaden horizons, build
+                      relationships, and rejuvenate the soul. But often, those
+                      experiences come at a cost. This is Peak Travel, a new
+                      podcast from WHYY about how travel shapes communities in
+                      hot-spots around the world. We’ll share the wonder that
+                      comes with exploring new places, as well as the harm that
+                      our worst travel habits can cause. And we’ll try to figure
+                      out how we can do it better. Each episode transports you
+                      to a new destination. You’ll meet the people who call that
+                      place home, hear their stories.
+                    </span>
+                  </div>
+                  <div className="podcost_contend_right_ctaLink">
+                    <HoverPrefetchLink
+                      target="_blank"
+                      className="Pill-button-with-graphics"
+                      href="https://open.spotify.com/show/0e5hWNp8cvtzuM0vPOY0OD"
+                    >
+                      Listen here
+                    </HoverPrefetchLink>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div>
-          <div className="podcost_contend_box">
-            <div className="podcost_contend_box_main">
-              <div className="podcost_contend_left">
-                <HoverPrefetchLink
-                  className="Link"
-                  target="_blank"
-                  href="https://open.spotify.com/show/64tVcrOKujpIggqO0X16JB"
-                >
-                  <img
-                    className="podcost_img"
-                    src={"assets/images/5 Live Boxing.png"}
-                  />
-                </HoverPrefetchLink>
-              </div>
-              <div className="podcost_contend_right">
-                <div className="podcost_contend_right_title">
+          <div>
+            <div className="podcost_contend_box">
+              <div className="podcost_contend_box_main">
+                <div className="podcost_contend_left">
                   <HoverPrefetchLink
+                    className="Link"
                     target="_blank"
-                    className="podcost_contend_right_title_Link"
                     href="https://open.spotify.com/show/64tVcrOKujpIggqO0X16JB"
                   >
-                    5 LIVE BOXING WITH STEVE BUNCE
+                    <img
+                      className="podcost_img"
+                      src={"assets/images/5 Live Boxing.png"}
+                    />
                   </HoverPrefetchLink>
                 </div>
-                <div className="podcost_contend_right_description">
-                  <span className="podcost_contend_right_span">
-                    All the latest discussion, news and reaction to Chris Eubank
-                    Jr v Conor Benn.
-                  </span>
-                </div>
-                <div className="podcost_contend_right_ctaLink">
-                  <HoverPrefetchLink
-                    target="_blank"
-                    className="Pill-button-with-graphics"
-                    href="https://open.spotify.com/show/64tVcrOKujpIggqO0X16JB"
-                  >
-                    Listen here
-                  </HoverPrefetchLink>
+                <div className="podcost_contend_right">
+                  <div className="podcost_contend_right_title">
+                    <HoverPrefetchLink
+                      target="_blank"
+                      className="podcost_contend_right_title_Link"
+                      href="https://open.spotify.com/show/64tVcrOKujpIggqO0X16JB"
+                    >
+                      5 LIVE BOXING WITH STEVE BUNCE
+                    </HoverPrefetchLink>
+                  </div>
+                  <div className="podcost_contend_right_description">
+                    <span className="podcost_contend_right_span">
+                      All the latest discussion, news and reaction to Chris
+                      Eubank Jr v Conor Benn.
+                    </span>
+                  </div>
+                  <div className="podcost_contend_right_ctaLink">
+                    <HoverPrefetchLink
+                      target="_blank"
+                      className="Pill-button-with-graphics"
+                      href="https://open.spotify.com/show/64tVcrOKujpIggqO0X16JB"
+                    >
+                      Listen here
+                    </HoverPrefetchLink>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </Slider>
+        </Slider>
+      )}
     </>
   );
 };
