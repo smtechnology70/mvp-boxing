@@ -14,9 +14,7 @@ export default function Home() {
     <div className="mvpBgContainer mvp_container" id="newsMainContent">
       <div className="d-md-none d-block" id="mobile-device">
         <div className="container-fluid nopadding" style={{ padding: 1 }}>
-          <section className="headlines">
-            <Sliders />
-          </section>
+          <section className="headlines">{/* <Sliders /> */}</section>
           <section className="bgwhite" id="boxing-news">
             <BoxingNews />
           </section>
@@ -25,7 +23,7 @@ export default function Home() {
             {/* <footer class="bg-button">        <div class="row nomargin">          <div class="col-12 nopadding">            <div class="text-right">              <a href="https://www.mvpboxing.com/news-mma" class="btn btn-grey vm">View More</a>            </div>          </div>        </div>      </footer> */}
           </section>
 
-          <Podcast />
+          {/* <Podcast /> */}
 
           {/* <section class="bgwhite" id="training-videos">    <header>      <div class="header-text"><a href="javascript:void(0);">BOXING & MMA TRAINING</a>        <a class=" btn btn-book p-0 px-1" href="https://mvp-boxing.square.site/">Book</a>      </div>    </header>    <div class="row nomargin bg-grey0">                  <div class="col-sm-12 mt15 flex-col nopadding">              <i id="menuIcon" class="ml10 fa fa-chevron-right chevron-icon"></i>              <div class="clear-left mr15">                <p class="box-image"><a href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-1"><img class="img-fluid lazyload" data-src="https://www.mvpboxing.com/assets/menusImg/z257g7b6cbe790ce987998875d5ee8b257.jpg" height="100" width="100"></a></p>                <a class="list-item caption text-justify" href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-1">WALKING DOWN OPPONENT</a>              </div>            </div>                  <div class="col-sm-12 mt15 flex-col nopadding">              <i id="menuIcon" class="ml10 fa fa-chevron-right chevron-icon"></i>              <div class="clear-left mr15">                <p class="box-image"><a href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-2"><img class="img-fluid lazyload" data-src="https://www.mvpboxing.com/assets/menusImg/z258g7b6cbe790ce987998875d5ee8b258.jpg" height="100" width="100"></a></p>                <a class="list-item caption text-justify" href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-2">BOXING FOR MMA</a>              </div>            </div>                  <div class="col-sm-12 mt15 flex-col nopadding">              <i id="menuIcon" class="ml10 fa fa-chevron-right chevron-icon"></i>              <div class="clear-left mr15">                <p class="box-image"><a href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-4"><img class="img-fluid lazyload" data-src="https://www.mvpboxing.com/assets/menusImg/z260g7b6cbe790ce987998875d5ee8b260.jpg" height="100" width="100"></a></p>                <a class="list-item caption text-justify" href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-4">COUNTER PUNCHING</a>              </div>            </div>                  <div class="col-sm-12 mt15 flex-col nopadding">              <i id="menuIcon" class="ml10 fa fa-chevron-right chevron-icon"></i>              <div class="clear-left mr15">                <p class="box-image"><a href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-5"><img class="img-fluid lazyload" data-src="https://www.mvpboxing.com/assets/menusImg/z261g7b6cbe790ce987998875d5ee8b261.jpg" height="100" width="100"></a></p>                <a class="list-item caption text-justify" href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-5">STIFF ARM</a>              </div>            </div>                  <div class="col-sm-12 mt15 flex-col nopadding">              <i id="menuIcon" class="ml10 fa fa-chevron-right chevron-icon"></i>              <div class="clear-left mr15">                <p class="box-image"><a href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-16"><img class="img-fluid lazyload" data-src="https://www.mvpboxing.com/assets/menusImg/z272g7b6cbe790ce987998875d5ee8b272.jpg" height="100" width="100"></a></p>                <a class="list-item caption text-justify" href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-16">DYNAMIC SPRINT DRILL</a>              </div>            </div>          </div>    <!-- <footer class="bg-button">      <div class="row nomargin">        <div class="col-12 nopadding">          <div class="text-right">            <a href="https://www.mvpboxing.com/videos" class="btn btn-grey videos-btn vm">View More</a>          </div>        </div>      </div>    </footer>   </section>*/}
           <div className="d-md-none d-block" id="mobile-device">
@@ -648,9 +646,7 @@ export default function Home() {
           href="https://www.mvpboxing.com/assets/css/style-trainning.css"
         />
         <div className="container-fluid nopadding" style={{ padding: 1 }}>
-          <section className="headlines">
-            <Sliders />
-          </section>
+          <section className="headlines">{/* <Sliders /> */}</section>
           <section className="bgwhite" id="boxing-news">
             <BoxingNews />
           </section>
@@ -658,7 +654,7 @@ export default function Home() {
             <MmaNews />
           </section>
           <section className="bgwhite" id="podcast">
-            <Podcast />
+            {/* <Podcast /> */}
           </section>
           <div className="d-md-none d-block" id="mobile-device">
             <div className="container-fluid nopadding" style={{ padding: 1 }}>
