@@ -14,7 +14,9 @@ export default function Home() {
     <div className="mvpBgContainer mvp_container" id="newsMainContent">
       <div className="d-md-none d-block" id="mobile-device">
         <div className="container-fluid nopadding" style={{ padding: 1 }}>
-          <section className="headlines">{/* <Sliders /> */}</section>
+          <section className="headlines">
+            <Sliders />
+          </section>
           <section className="bgwhite" id="boxing-news">
             <BoxingNews />
           </section>
@@ -646,7 +648,9 @@ export default function Home() {
           href="https://www.mvpboxing.com/assets/css/style-trainning.css"
         />
         <div className="container-fluid nopadding" style={{ padding: 1 }}>
-          <section className="headlines">{/* <Sliders /> */}</section>
+          <section className="headlines">
+            <Sliders />
+          </section>
           <section className="bgwhite" id="boxing-news">
             <BoxingNews />
           </section>

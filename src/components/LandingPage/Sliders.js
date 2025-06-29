@@ -1,13 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import GLOBALS from "@/server/Globals";
 import Loader from "../Loader";
 
-const Slider = dynamic(() => import("react-slick"), { ssr: false });
+const Slider = dynamic(() => import("react-slick").then((mod) => mod.default), {
+  ssr: false,
+});
 
 export default function Sliders() {
   const [loading, setLoading] = useState(false);
@@ -36,7 +38,7 @@ export default function Sliders() {
     };
   }, []);
 
-  var settings = {
+  const settings = {
     autoplay: true,
     autoplaySpeed: 4000,
     dots: true,
@@ -45,14 +47,16 @@ export default function Sliders() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
     <>
       <Loader />
-      <Slider {...settings}>
-        {sliders.map((item, i) => {
-          return (
+      {sliders.length > 0 && (
+        <Slider {...settings}>
+          {sliders.map((item, i) => (
             <div key={i}>
               <img
+                alt={`slide-${i}`}
                 data-src={item.image}
                 className="img-fluid d-show ls-is-cached lazyloaded"
                 id="s3"
@@ -68,9 +72,9 @@ export default function Sliders() {
                 >{`"${item.title}"`}</p>
               </div>
             </div>
-          );
-        })}
-      </Slider>
+          ))}
+        </Slider>
+      )}
     </>
   );
 }
