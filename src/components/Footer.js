@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
+import HoverPrefetchLink from "@/components/HoverPrefetchLink";
 // import Image from 'next/image'; // Uncomment if you want to use next/image for local images
 import img2 from "@/assets/img/gold_crown.png";
 import img3 from "@/assets/img/white-arrow-down.png";
@@ -141,13 +141,17 @@ export default function Footer() {
               <ul className="footer_item_ul">
                 <li className="MVP_BOXING">MVP BOXING</li>
                 <li className="footer_item_li" onClick={handleScrollTop}>
-                  <Link href="/about">About</Link>
+                  <HoverPrefetchLink href="/about">About</HoverPrefetchLink>
                 </li>
                 <li className="footer_item_li" onClick={handleScrollTop}>
-                  <Link href="/community">Community</Link>
+                  <HoverPrefetchLink href="/community">
+                    Community
+                  </HoverPrefetchLink>
                 </li>
                 <li className="footer_item_li" onClick={handleScrollTop}>
-                  <Link href="/launchingsoon">Shop</Link>
+                  <HoverPrefetchLink href="/launchingsoon">
+                    Shop
+                  </HoverPrefetchLink>
                 </li>
               </ul>
             </div>
@@ -155,19 +159,23 @@ export default function Footer() {
               <ul className="footer_item_ul">
                 <li className="MVP_BOXING">HELP</li>
                 <li className="footer_item_li" onClick={handleScrollTop}>
-                  <Link href="/Partnership">Partnership</Link>
+                  <HoverPrefetchLink href="/Partnership">
+                    Partnership
+                  </HoverPrefetchLink>
                 </li>
                 <li className="footer_item_li" onClick={handleScrollTop}>
-                  <Link href="/Inquiries">Inquiries</Link>
+                  <HoverPrefetchLink href="/Inquiries">
+                    Inquiries
+                  </HoverPrefetchLink>
                 </li>
                 <li className="footer_item_li" onClick={handleScrollTop}>
-                  <Link href="/Support">Support</Link>
+                  <HoverPrefetchLink href="/Support">Support</HoverPrefetchLink>
                 </li>
                 <li className="footer_item_li" onClick={handleScrollTop}>
-                  <Link href="/Sitemap">Sitemap</Link>
+                  <HoverPrefetchLink href="/Sitemap">Sitemap</HoverPrefetchLink>
                 </li>
                 <li className="footer_item_li" onClick={handleScrollTop}>
-                  <Link href="/contact">Contact</Link>
+                  <HoverPrefetchLink href="/contact">Contact</HoverPrefetchLink>
                 </li>
               </ul>
             </div>
@@ -175,16 +183,24 @@ export default function Footer() {
               <ul className="footer_item_ul">
                 <li className="MVP_BOXING">LEGAL</li>
                 <li className="footer_item_li" onClick={handleScrollTop}>
-                  <Link href="/Privacy_Policy">Privacy Policy</Link>
+                  <HoverPrefetchLink href="/Privacy_Policy">
+                    Privacy Policy
+                  </HoverPrefetchLink>
                 </li>
                 <li className="footer_item_li" onClick={handleScrollTop}>
-                  <Link href="/Terms_of_use">Terms of Use</Link>
+                  <HoverPrefetchLink href="/Terms_of_use">
+                    Terms of Use
+                  </HoverPrefetchLink>
                 </li>
                 <li className="footer_item_li" onClick={handleScrollTop}>
-                  <Link href="/Advertise_With_Us">Advertise With Us</Link>
+                  <HoverPrefetchLink href="/Advertise_With_Us">
+                    Advertise With Us
+                  </HoverPrefetchLink>
                 </li>
                 <li className="footer_item_li" onClick={handleScrollTop}>
-                  <Link href="/Cookie_Policy">Cookie Policy</Link>
+                  <HoverPrefetchLink href="/Cookie_Policy">
+                    Cookie Policy
+                  </HoverPrefetchLink>
                 </li>
               </ul>
             </div>
@@ -289,9 +305,9 @@ export default function Footer() {
           <div className="footer_contend_socialicon">
             <div className="footer_text">
               <p className="footer_text_top">
-                <Link href="/" className="footer-home-link">
+                <HoverPrefetchLink href="/" className="footer-home-link">
                   MVPBOXING.COM
-                </Link>{" "}
+                </HoverPrefetchLink>{" "}
                 Masson Media Ventures, LLC. ©2025 All Rights Reserved.
               </p>
               <p className="footer_text_button">
@@ -374,19 +390,22 @@ export default function Footer() {
             <ul className="footer_item_ul">
               <li className="MVP_BOXING">MVP BOXING</li>
               <li className="footer_item_li" onClick={handleScrollTop}>
-                <Link href="/about" className="footer_item_a">
+                <HoverPrefetchLink href="/about" className="footer_item_a">
                   About
-                </Link>
+                </HoverPrefetchLink>
               </li>
               <li className="footer_item_li" onClick={handleScrollTop}>
-                <Link href="/community" className="footer_item_a">
+                <HoverPrefetchLink href="/community" className="footer_item_a">
                   Community
-                </Link>
+                </HoverPrefetchLink>
               </li>
               <li className="footer_item_li" onClick={handleScrollTop}>
-                <Link href="/launchingsoons" className="footer_item_a">
+                <HoverPrefetchLink
+                  href="/launchingsoons"
+                  className="footer_item_a"
+                >
                   Shop
-                </Link>
+                </HoverPrefetchLink>
               </li>
             </ul>
           </div>
@@ -394,24 +413,27 @@ export default function Footer() {
             <ul className="footer_item_ul">
               <li className="MVP_BOXING">HELP</li>
               <li className="footer_item_li" onClick={handleScrollTop}>
-                <Link href="/Partnership" className="footer_item_a">
+                <HoverPrefetchLink
+                  href="/Partnership"
+                  className="footer_item_a"
+                >
                   Partnership
-                </Link>
+                </HoverPrefetchLink>
               </li>
               <li className="footer_item_li" onClick={handleScrollTop}>
-                <Link href="/Inquiries" className="footer_item_a">
+                <HoverPrefetchLink href="/Inquiries" className="footer_item_a">
                   Inquiries
-                </Link>
+                </HoverPrefetchLink>
               </li>
               <li className="footer_item_li" onClick={handleScrollTop}>
-                <Link href="/Sitemap" className="footer_item_a">
+                <HoverPrefetchLink href="/Sitemap" className="footer_item_a">
                   Sitemap
-                </Link>
+                </HoverPrefetchLink>
               </li>
               <li className="footer_item_li" onClick={handleScrollTop}>
-                <Link href="/contact-us" className="footer_item_a">
+                <HoverPrefetchLink href="/contact-us" className="footer_item_a">
                   Contact
-                </Link>
+                </HoverPrefetchLink>
               </li>
             </ul>
           </div>
@@ -419,24 +441,36 @@ export default function Footer() {
             <ul className="footer_item_ul">
               <li className="MVP_BOXING">LEGAL</li>
               <li className="footer_item_li" onClick={handleScrollTop}>
-                <Link href="/Privacy_Policy" className="footer_item_a">
+                <HoverPrefetchLink
+                  href="/Privacy_Policy"
+                  className="footer_item_a"
+                >
                   Privacy Policy
-                </Link>
+                </HoverPrefetchLink>
               </li>
               <li className="footer_item_li" onClick={handleScrollTop}>
-                <Link href="/Terms_of_use" className="footer_item_a">
+                <HoverPrefetchLink
+                  href="/Terms_of_use"
+                  className="footer_item_a"
+                >
                   Terms of Use
-                </Link>
+                </HoverPrefetchLink>
               </li>
               <li className="footer_item_li" onClick={handleScrollTop}>
-                <Link href="/Advertise_With_Us" className="footer_item_a">
+                <HoverPrefetchLink
+                  href="/Advertise_With_Us"
+                  className="footer_item_a"
+                >
                   Advertise With Us
-                </Link>
+                </HoverPrefetchLink>
               </li>
               <li className="footer_item_li" onClick={handleScrollTop}>
-                <Link href="/Cookie_Policy" className="footer_item_a">
+                <HoverPrefetchLink
+                  href="/Cookie_Policy"
+                  className="footer_item_a"
+                >
                   Cookie Policy
-                </Link>
+                </HoverPrefetchLink>
               </li>
             </ul>
           </div>

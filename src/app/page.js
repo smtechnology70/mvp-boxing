@@ -1,14 +1,5 @@
-import * as React from "react";
-import Link from "next/link";
-// import Sliders from "../elements/Sliders";
-// import BoxingNews from "../elements/Boxing_news";
-// import MmaNews from "../elements/Mma_news";
-// import Podcast from "../elements/Podcast";
-// import BoxingTraining from "../elements/Boxing_training";
-// import BoxingTrainingMma from "../elements/Boxing_training_mma";
-// import SidebarBottom from "../elements/SidebarBottom";
-// import SidebarBottomMma from "../elements/SidebarBottomMma";
-
+import React from "react";
+import HoverPrefetchLink from "@/components/HoverPrefetchLink";
 import BoxingNews from "@/components/LandingPage/Boxing_news";
 import MmaNews from "@/components/LandingPage/Mma_news";
 import Podcast from "@/components/LandingPage/Podcast";
@@ -508,7 +499,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div style={{ textAlign: "right", marginTop: "-10px" }}>
-                    <Link
+                    <HoverPrefetchLink
                       href="/Injuries"
                       className="vote_buton"
                       style={{
@@ -520,7 +511,7 @@ export default function Home() {
                       }}
                     >
                       More »
-                    </Link>
+                    </HoverPrefetchLink>
                   </div>
                   <div className="clear" />
                 </div>
@@ -1130,7 +1121,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div style={{ textAlign: "right", marginTop: "-10px" }}>
-                    <Link
+                    <HoverPrefetchLink
                       href="/Injuries"
                       className="vote_buton"
                       style={{
@@ -1142,7 +1133,7 @@ export default function Home() {
                       }}
                     >
                       More »
-                    </Link>
+                    </HoverPrefetchLink>
                   </div>
                   <div className="clear" />
                 </div>

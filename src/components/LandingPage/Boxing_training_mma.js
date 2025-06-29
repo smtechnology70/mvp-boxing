@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
 import GLOBALS from "@/server/Globals";
 
-import Link from "next/link";
+import HoverPrefetchLink from "@/components/HoverPrefetchLink";
 
 const createMarkup = (htmlString) => {
   return { __html: htmlString };
@@ -46,9 +46,9 @@ const BoxingTrainingMma = (props) => {
             <div key={i} className="videos1">
               {" "}
               <img src={item.image} className="videos1img" />{" "}
-              <Link href={item.youtubevideolink}>
+              <HoverPrefetchLink href={item.youtubevideolink}>
                 <img src="assets/img/play.png" className="play_icon" />{" "}
-              </Link>
+              </HoverPrefetchLink>
               <div className="videos_text">
                 <div className="time">
                   <p className="time_text">{item.videoduration}</p>

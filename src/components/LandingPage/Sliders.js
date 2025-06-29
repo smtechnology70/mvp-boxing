@@ -1,11 +1,13 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Slider from "react-slick";
+import dynamic from "next/dynamic";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import GLOBALS from "@/server/Globals";
 import Loader from "../Loader";
+
+const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 export default function Sliders() {
   const [loading, setLoading] = useState(false);

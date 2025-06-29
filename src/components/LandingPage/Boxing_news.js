@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import HoverPrefetchLink from "@/components/HoverPrefetchLink";
 
 import GLOBALS from "@/server/Globals";
 
@@ -59,13 +59,13 @@ const BoxingNews = (props) => {
                     src={item.image}
                   />
                 </p>
-                <Link
+                <HoverPrefetchLink
                   href={item.id}
                   className="list-item caption news-caption col-8 pl-2 pr-3 txt-black text-left news_link"
                 >
                   <strong className="news-title">{item.title}</strong>
                   {item.content}
-                </Link>
+                </HoverPrefetchLink>
               </div>
             </div>
           );

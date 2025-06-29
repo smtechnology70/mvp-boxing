@@ -1,0 +1,61 @@
+/* style-body-scan.css */
+
+/* 1) Gradient background behind the scan */
+#scan_flash {
+    background: linear-gradient(135deg, #DF7A26 0%, #91191C 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  /* 2) Make the scan container position relative */
+  .scan {
+    position: relative;
+    display: inline-block;
+  }
+  .scan img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* 3) Common hotspot style */
+  .scan .item {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid #E02121;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E02121;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  
+  /* 4) Male hotspots */
+  #male-body-cont .item1  { top:  6%; left: 50%; } /* Head */
+  #male-body-cont .item2  { top: 12%; left: 52%; } /* Facial */
+  #male-body-cont .item3  { top: 22%; left: 45%; } /* Shoulder */
+  #male-body-cont .item4  { top: 40%; left: 28%; } /* Wrist/Hand */
+  #male-body-cont .item5  { top: 48%; left: 52%; } /* Low Back */
+  #male-body-cont .item6  { top: 30%; left: 68%; } /* Elbow */
+  #male-body-cont .item7  { top: 55%; left: 60%; } /* Hip */
+  #male-body-cont .item8  { top: 70%; left: 52%; } /* Knee */
+  #male-body-cont .item9  { top: 78%; left: 58%; } /* Lower Leg */
+  #male-body-cont .item10 { top: 85%; left: 55%; } /* Foot */
+  #male-body-cont .item11 { top: 92%; left: 52%; } /* Ankle */
+  
+  /* 5) Female hotspots */
+  #female-body-cont .item1 { top: 15%; left: 60%; } /* Shoulder */
+  #female-body-cont .item2 { top: 30%; left: 75%; } /* Elbow */
+  #female-body-cont .item3 { top: 45%; left: 25%; } /* Wrist/Hand */
+  #female-body-cont .item4 { top: 55%; left: 52%; } /* Low Back */
+  #female-body-cont .item5 { top: 70%; left: 52%; } /* Knee */
+  #female-body-cont .item6 { top: 75%; left: 58%; } /* Lower Leg */
+  #female-body-cont .item7 { top: 85%; left: 52%; } /* Ankle */
+  #female-body-cont .item8 { top: 90%; left: 48%; } /* Foot */
