@@ -1,13 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Slider from "react-slick";
+import dynamic from "next/dynamic";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import HoverPrefetchLink from "@/components/HoverPrefetchLink";
 
-import GLOBALS from "@/server/Globals";
-
-import Link from "next/link";
+const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 const createMarkup = (htmlString) => {
   return { __html: htmlString };
@@ -80,23 +79,23 @@ const Podcast = (props) => {
           <div className="podcost_contend_box">
             <div className="podcost_contend_box_main">
               <div className="podcost_contend_left">
-                <Link
+                <HoverPrefetchLink
                   target="_blank"
                   className="Link"
                   href="https://open.spotify.com/show/6mEX6mQ7RlA6jnNwEy4XN0"
                 >
                   <img className="podcost_img" src={"assets/images/pp1.jpg"} />
-                </Link>
+                </HoverPrefetchLink>
               </div>
               <div className="podcost_contend_right">
                 <div className="podcost_contend_right_title">
-                  <Link
+                  <HoverPrefetchLink
                     target="_blank"
                     className="podcost_contend_right_title_Link"
                     href="https://open.spotify.com/show/6mEX6mQ7RlA6jnNwEy4XN0"
                   >
                     THE FIGHT
-                  </Link>
+                  </HoverPrefetchLink>
                 </div>
                 <div className="podcost_contend_right_description">
                   <span className="podcost_contend_right_span">
@@ -110,13 +109,13 @@ const Podcast = (props) => {
                   </span>
                 </div>
                 <div className="podcost_contend_right_ctaLink">
-                  <Link
+                  <HoverPrefetchLink
                     target="_blank"
                     className="Pill-button-with-graphics"
                     href="https://open.spotify.com/show/6mEX6mQ7RlA6jnNwEy4XN0"
                   >
                     Listen here
-                  </Link>
+                  </HoverPrefetchLink>
                 </div>
               </div>
             </div>
@@ -127,23 +126,23 @@ const Podcast = (props) => {
           <div className="podcost_contend_box">
             <div className="podcost_contend_box_main">
               <div className="podcost_contend_left">
-                <Link
+                <HoverPrefetchLink
                   target="_blank"
                   className="Link"
                   href="https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk"
                 >
                   <img className="podcost_img" src={"assets/images/pp2.jpg"} />
-                </Link>
+                </HoverPrefetchLink>
               </div>
               <div className="podcost_contend_right">
                 <div className="podcost_contend_right_title">
-                  <Link
+                  <HoverPrefetchLink
                     target="_blank"
                     className="podcost_contend_right_title_Link"
                     href="https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk"
                   >
                     THE JOE ROGAN EXPERIENCE
-                  </Link>
+                  </HoverPrefetchLink>
                 </div>
                 <div className="podcost_contend_right_description">
                   <span className="podcost_contend_right_span">
@@ -151,13 +150,13 @@ const Podcast = (props) => {
                   </span>
                 </div>
                 <div className="podcost_contend_right_ctaLink">
-                  <Link
+                  <HoverPrefetchLink
                     target="_blank"
                     className="Pill-button-with-graphics"
                     href="https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk"
                   >
                     Listen here
-                  </Link>
+                  </HoverPrefetchLink>
                 </div>
               </div>
             </div>
@@ -168,23 +167,23 @@ const Podcast = (props) => {
           <div className="podcost_contend_box">
             <div className="podcost_contend_box_main">
               <div className="podcost_contend_left">
-                <Link
+                <HoverPrefetchLink
                   target="_blank"
                   className="Link"
                   href="https://open.spotify.com/show/0e5hWNp8cvtzuM0vPOY0OD"
                 >
                   <img className="podcost_img" src={"assets/images/pp3.jpg"} />
-                </Link>
+                </HoverPrefetchLink>
               </div>
               <div className="podcost_contend_right">
                 <div className="podcost_contend_right_title">
-                  <Link
+                  <HoverPrefetchLink
                     target="_blank"
                     className="podcost_contend_right_title_Link"
                     href="https://open.spotify.com/show/0e5hWNp8cvtzuM0vPOY0OD"
                   >
                     WORTH A LISTEN
-                  </Link>
+                  </HoverPrefetchLink>
                 </div>
                 <div className="podcost_contend_right_description">
                   <span className="podcost_contend_right_span">
@@ -201,13 +200,13 @@ const Podcast = (props) => {
                   </span>
                 </div>
                 <div className="podcost_contend_right_ctaLink">
-                  <Link
+                  <HoverPrefetchLink
                     target="_blank"
                     className="Pill-button-with-graphics"
                     href="https://open.spotify.com/show/0e5hWNp8cvtzuM0vPOY0OD"
                   >
                     Listen here
-                  </Link>
+                  </HoverPrefetchLink>
                 </div>
               </div>
             </div>
@@ -218,7 +217,7 @@ const Podcast = (props) => {
           <div className="podcost_contend_box">
             <div className="podcost_contend_box_main">
               <div className="podcost_contend_left">
-                <Link
+                <HoverPrefetchLink
                   className="Link"
                   target="_blank"
                   href="https://open.spotify.com/show/64tVcrOKujpIggqO0X16JB"
@@ -227,17 +226,17 @@ const Podcast = (props) => {
                     className="podcost_img"
                     src={"assets/images/5 Live Boxing.png"}
                   />
-                </Link>
+                </HoverPrefetchLink>
               </div>
               <div className="podcost_contend_right">
                 <div className="podcost_contend_right_title">
-                  <Link
+                  <HoverPrefetchLink
                     target="_blank"
                     className="podcost_contend_right_title_Link"
                     href="https://open.spotify.com/show/64tVcrOKujpIggqO0X16JB"
                   >
                     5 LIVE BOXING WITH STEVE BUNCE
-                  </Link>
+                  </HoverPrefetchLink>
                 </div>
                 <div className="podcost_contend_right_description">
                   <span className="podcost_contend_right_span">
@@ -246,13 +245,13 @@ const Podcast = (props) => {
                   </span>
                 </div>
                 <div className="podcost_contend_right_ctaLink">
-                  <Link
+                  <HoverPrefetchLink
                     target="_blank"
                     className="Pill-button-with-graphics"
                     href="https://open.spotify.com/show/64tVcrOKujpIggqO0X16JB"
                   >
                     Listen here
-                  </Link>
+                  </HoverPrefetchLink>
                 </div>
               </div>
             </div>

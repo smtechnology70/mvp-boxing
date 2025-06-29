@@ -1,10 +1,8 @@
-// app/body-scan-break-down-injuries/page.js
-
 "use client";
 
 import { useEffect } from "react";
 import Head from "next/head";
-import Link from "next/link";
+import HoverPrefetchLink from "@/components/HoverPrefetchLink";
 
 export default function BodyScanPage() {
   useEffect(() => {
@@ -100,7 +98,7 @@ export default function BodyScanPage() {
                       title: "Ankle Injuries",
                     },
                   ].map((item, i) => (
-                    <Link
+                    <HoverPrefetchLink
                       key={i}
                       href={item.href}
                       className={`item item${i + 1}`}
@@ -112,7 +110,7 @@ export default function BodyScanPage() {
                         title={item.title}
                         className="img hvr-bounce-out"
                       />
-                    </Link>
+                    </HoverPrefetchLink>
                   ))}
                 </div>
               </div>
@@ -173,7 +171,7 @@ export default function BodyScanPage() {
                       title: "Foot Injuries",
                     },
                   ].map((item, i) => (
-                    <Link
+                    <HoverPrefetchLink
                       key={i}
                       href={item.href}
                       className={`item item${i + 1}`}
@@ -185,7 +183,7 @@ export default function BodyScanPage() {
                         title={item.title}
                         className="img hvr-bounce-out"
                       />
-                    </Link>
+                    </HoverPrefetchLink>
                   ))}
                 </div>
               </div>

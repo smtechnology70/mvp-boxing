@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import HoverPrefetchLink from "@/components/HoverPrefetchLink";
 
 import GLOBALS from "@/server/Globals";
 
@@ -47,9 +47,9 @@ const SidebarBottom = (props) => {
             <div key={i} className="headlines-item-block">
               <i id="menuIcon" className="headlines-contend" />
               <div className="">
-                <Link href={item.id} className="headlines-text">
+                <HoverPrefetchLink href={item.id} className="headlines-text">
                   <strong className="headlines-text-item">{item.title}</strong>
-                </Link>
+                </HoverPrefetchLink>
               </div>
             </div>
           );

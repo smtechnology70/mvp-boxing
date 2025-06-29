@@ -3,8 +3,8 @@
 import Loader from "@/components/Loader";
 import React, { useState, useEffect, useRef, Fragment } from "react";
 import { useParams } from "next/navigation";
-import Link from "next/link";
 import GLOBALS from "@/server/Globals";
+import HoverPrefetchLink from "@/components/HoverPrefetchLink";
 
 const createMarkup = (htmlString) => {
   return { __html: htmlString };
@@ -60,14 +60,14 @@ const Article = (props) => {
           <div className="page__links" style={{ marginBottom: 10 }}>
             <h3 className="page__links__title" />
 
-            <Link
+            <HoverPrefetchLink
               href="/contact"
               className="page__links__link btn feat-link"
               target="_self"
             >
               <strong>Contact Us</strong>
               <i className="fa fa-chevron-right" aria-hidden="true" />
-            </Link>
+            </HoverPrefetchLink>
           </div>
           <div className="content-separator">&nbsp;</div>
           <div className="socialInfo">
@@ -78,7 +78,7 @@ const Article = (props) => {
                   className="social-icons a2a_kit a2a_kit_size_32 a2a_default_style"
                   style={{ lineHeight: 0 }}
                 >
-                  <Link
+                  <HoverPrefetchLink
                     className="a2a_button_facebook"
                     href="https://www.facebook.com/officialmvpboxing/?ref=ts#"
                     title="Facebook"
@@ -102,9 +102,9 @@ const Article = (props) => {
                       </svg>
                     </span>
                     <span className="a2a_label">Facebook</span>
-                  </Link>
+                  </HoverPrefetchLink>
 
-                  <Link
+                  <HoverPrefetchLink
                     className="a2a_button_twitter"
                     href="https://x.com/mvpboxing"
                     title="Twitter"
@@ -128,9 +128,9 @@ const Article = (props) => {
                       </svg>
                     </span>
                     <span className="a2a_label">Twitter</span>
-                  </Link>
+                  </HoverPrefetchLink>
 
-                  <Link
+                  <HoverPrefetchLink
                     className="a2a_button_whatsapp"
                     href="https://api.whatsapp.com/send?text=Womens%20Sports%20Injuries%20%7C%20MVP%20Boxing%20https%3A%2F%2Fwww.mvpboxing.com%2Farticle%2Fwomens-sports-injuries"
                     title="WhatsApp"
@@ -156,9 +156,9 @@ const Article = (props) => {
                       </svg>
                     </span>
                     <span className="a2a_label">WhatsApp</span>
-                  </Link>
+                  </HoverPrefetchLink>
 
-                  <Link
+                  <HoverPrefetchLink
                     className="a2a_button_facebook_messenger"
                     href="https://www.facebook.com/dialog/send?app_id=5303202981&display=popup&link=https%3A%2F%2Fwww.mvpboxing.com%2Farticle%2Fwomens-sports-injuries&redirect_uri=https%3A%2F%2Fstatic.addtoany.com%2Fmenu%2Fthanks.html%23url%3Dhttps%3A%2F%2Fwww.mvpboxing.com%2Farticle%2Fwomens-sports-injuries"
                     title="Facebook Messenger"
@@ -182,9 +182,9 @@ const Article = (props) => {
                       </svg>
                     </span>
                     <span className="a2a_label">Messenger</span>
-                  </Link>
+                  </HoverPrefetchLink>
 
-                  <Link
+                  <HoverPrefetchLink
                     className="a2a_button_reddit"
                     href="https://www.reddit.com/login/?dest=https%3A%2F%2Fwww.reddit.com%2Fsubmit%3Furl%3Dhttps%253A%252F%252Fwww.mvpboxing.com%252Farticle%252Fwomens-sports-injuries%26title%3DWomens%2BSports%2BInjuries%2B%257C%2BMVP%2BBoxing"
                     title="Reddit"
@@ -208,8 +208,8 @@ const Article = (props) => {
                       </svg>
                     </span>
                     <span className="a2a_label">Reddit</span>
-                  </Link>
-                  <Link
+                  </HoverPrefetchLink>
+                  <HoverPrefetchLink
                     className="a2a_button_pinterest"
                     href="/#pinterest"
                     title="Pinterest"
@@ -233,8 +233,8 @@ const Article = (props) => {
                       </svg>
                     </span>
                     <span className="a2a_label">Pinterest</span>
-                  </Link>
-                  <Link
+                  </HoverPrefetchLink>
+                  <HoverPrefetchLink
                     className="a2a_button_email"
                     href="/#email"
                     title="Email"
@@ -258,7 +258,7 @@ const Article = (props) => {
                       </svg>
                     </span>
                     <span className="a2a_label">Email</span>
-                  </Link>
+                  </HoverPrefetchLink>
                 </span>
               </p>
               <div style={{ clear: "both" }} />

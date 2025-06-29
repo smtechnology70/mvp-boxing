@@ -3,7 +3,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import HoverPrefetchLink from "@/components/HoverPrefetchLink";
 import GLOBALS from "@/server/Globals";
 import Loader from "@/components/Loader";
 
@@ -95,9 +95,9 @@ export default function SupportPage() {
             </div>
             <div className="support-contact">
               For other help, please{" "}
-              <Link href="/contact" className="text-red underline">
+              <HoverPrefetchLink href="/contact" className="text-red underline">
                 Contact Us
-              </Link>
+              </HoverPrefetchLink>
             </div>
           </div>
 

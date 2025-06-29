@@ -3,7 +3,7 @@
 import Loader from "@/components/Loader";
 import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "next/navigation";
-import Link from "next/link";
+import HoverPrefetchLink from "@/components/HoverPrefetchLink";
 import GLOBALS from "@/server/Globals";
 
 const createMarkup = (htmlString) => {
@@ -180,7 +180,10 @@ const Kids = (props) => {
                     <ul className="list-group" id="news-list">
                       {listdata.map((item, i) => {
                         return (
-                          <Link key={"sideitem" + i} href={item.id}>
+                          <HoverPrefetchLink
+                            key={"sideitem" + i}
+                            href={item.id}
+                          >
                             <li
                               key={i}
                               className="list-group-item ng-scope"
@@ -193,7 +196,7 @@ const Kids = (props) => {
                                 {item.title}
                               </p>
                             </li>
-                          </Link>
+                          </HoverPrefetchLink>
                         );
                       })}
                     </ul>

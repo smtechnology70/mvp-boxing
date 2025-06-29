@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import HoverPrefetchLink from "@/components/HoverPrefetchLink";
 import GLOBALS from "@/server/Globals";
 import Loader from "@/components/Loader";
 
@@ -52,51 +52,61 @@ export default function SitemapPage() {
             <div className="col-12">
               <ul>
                 <li className="linksHeading">
-                  <Link href="/">HOME</Link>
+                  <HoverPrefetchLink href="/">HOME</HoverPrefetchLink>
                 </li>
               </ul>
             </div>
             <div className="col-12 col-md-4">
               <ul>
                 <li className="linksHeading">
-                  <Link href="/news">ALL NEWS</Link>
+                  <HoverPrefetchLink href="/news">ALL NEWS</HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/talent-representation/boxing">Boxing</Link>
+                  <HoverPrefetchLink href="/talent-representation/boxing">
+                    Boxing
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/news-mma">MMA</Link>
+                  <HoverPrefetchLink href="/news-mma">MMA</HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">
-                  <Link href="/espanol-boxeo">ESPAÑOL</Link>
+                  <HoverPrefetchLink href="/espanol-boxeo">
+                    ESPAÑOL
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/espanol-boxeo">Boxeo</Link>
+                  <HoverPrefetchLink href="/espanol-boxeo">
+                    Boxeo
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/espanol-amm">AMM</Link>
+                  <HoverPrefetchLink href="/espanol-amm">AMM</HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">FIGHT WORLD</li>
                 <li>
-                  <Link href="/fight-poll">Fight Poll</Link>
+                  <HoverPrefetchLink href="/fight-poll">
+                    Fight Poll
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/Injuries">Body Scan</Link>
+                  <HoverPrefetchLink href="/Injuries">
+                    Body Scan
+                  </HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">MORE</li>
                 <li>
-                  <Link href="/article/muhammad-ali-boxing-reform-act">
+                  <HoverPrefetchLink href="/article/muhammad-ali-boxing-reform-act">
                     Ali Reform Act
-                  </Link>
+                  </HoverPrefetchLink>
                 </li>
                 <li>
                   <a
@@ -117,7 +127,9 @@ export default function SitemapPage() {
                   </a>
                 </li>
                 <li>
-                  <Link href="/article/unified_boxing_rules">Boxing Rules</Link>
+                  <HoverPrefetchLink href="/article/unified_boxing_rules">
+                    Boxing Rules
+                  </HoverPrefetchLink>
                 </li>
                 <li>Athlete’s Brain Health</li>
                 <li>TICKETS</li>
@@ -128,23 +140,29 @@ export default function SitemapPage() {
               <ul>
                 <li className="linksHeading">WATCH</li>
                 <li>
-                  <Link href="/talent-representation/boxing">BOXING</Link>
+                  <HoverPrefetchLink href="/talent-representation/boxing">
+                    BOXING
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/news-mma">MMA</Link>
+                  <HoverPrefetchLink href="/news-mma">MMA</HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">MVP BOXING</li>
                 <li>
-                  <Link href="/about">About</Link>
+                  <HoverPrefetchLink href="/about">About</HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/community">Community</Link>
+                  <HoverPrefetchLink href="/community">
+                    Community
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/launchingsoon">Shop</Link>
+                  <HoverPrefetchLink href="/launchingsoon">
+                    Shop
+                  </HoverPrefetchLink>
                 </li>
               </ul>
             </div>
@@ -153,112 +171,144 @@ export default function SitemapPage() {
               <ul>
                 <li className="linksHeading">ALL ACCESS VIDEOS</li>
                 <li>
-                  <Link href="/videos/all-access/FIGHT-HIGHLIGHTS-Josh-Warrington-vs-Luis-Alberto-Lopez">
+                  <HoverPrefetchLink href="/videos/all-access/FIGHT-HIGHLIGHTS-Josh-Warrington-vs-Luis-Alberto-Lopez">
                     Boxing Training
-                  </Link>
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/videos/mma-training/5-stance-basics-mma-fighting">
+                  <HoverPrefetchLink href="/videos/mma-training/5-stance-basics-mma-fighting">
                     MMA Training
-                  </Link>
+                  </HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">PROGRAMS</li>
                 <li>
-                  <Link href="/article/boxing">Boxing Training</Link>
+                  <HoverPrefetchLink href="/article/boxing">
+                    Boxing Training
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/brazilian-jiu-jitsu">BJJ Training</Link>
+                  <HoverPrefetchLink href="/article/brazilian-jiu-jitsu">
+                    BJJ Training
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/online-training">Online Training</Link>
+                  <HoverPrefetchLink href="/article/online-training">
+                    Online Training
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/mvp-kids/kid-reporter">Kids & Juniors</Link>
+                  <HoverPrefetchLink href="/mvp-kids/kid-reporter">
+                    Kids & Juniors
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/seminars">Seminars</Link>
+                  <HoverPrefetchLink href="/article/seminars">
+                    Seminars
+                  </HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">FORUM</li>
                 <li>
-                  <Link href="/forums">forum</Link>
+                  <HoverPrefetchLink href="/forums">forum</HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">EXPERTISE</li>
                 <li>
-                  <Link href="/services/talent-representation">
+                  <HoverPrefetchLink href="/services/talent-representation">
                     Talent Rep.
-                  </Link>
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/services/consulting">Consulting</Link>
+                  <HoverPrefetchLink href="/services/consulting">
+                    Consulting
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/services/promotions">Promotions</Link>
+                  <HoverPrefetchLink href="/services/promotions">
+                    Promotions
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/services/sponsorships">Sponsorship</Link>
+                  <HoverPrefetchLink href="/services/sponsorships">
+                    Sponsorship
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/services/marketing">Marketing</Link>
+                  <HoverPrefetchLink href="/services/marketing">
+                    Marketing
+                  </HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">MVPBOXING +</li>
                 <li>
-                  <Link href="/talent-representation/boxing">Boxing</Link>
+                  <HoverPrefetchLink href="/talent-representation/boxing">
+                    Boxing
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/news-mma">MMA</Link>
+                  <HoverPrefetchLink href="/news-mma">MMA</HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">MVP BOXING APP</li>
                 <li>
-                  <Link href="/mvp-kids/kid-reporter">MVP BOXING APP</Link>
+                  <HoverPrefetchLink href="/mvp-kids/kid-reporter">
+                    MVP BOXING APP
+                  </HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">MVP KIDS</li>
                 <li>
-                  <Link href="/mvp-kids/football">Football</Link>
+                  <HoverPrefetchLink href="/mvp-kids/football">
+                    Football
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/mvp-kids/baseball">Baseball</Link>
+                  <HoverPrefetchLink href="/mvp-kids/baseball">
+                    Baseball
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/mvp-kids/unboxed">Unboxed</Link>
+                  <HoverPrefetchLink href="/mvp-kids/unboxed">
+                    Unboxed
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/mvp-kids/kid-reporter">Kid Reporter</Link>
+                  <HoverPrefetchLink href="/mvp-kids/kid-reporter">
+                    Kid Reporter
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/mvp-kids/kid-reporter">More</Link>
+                  <HoverPrefetchLink href="/mvp-kids/kid-reporter">
+                    More
+                  </HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">HELP</li>
                 <li>
-                  <Link href="/partnership-inquiries">
+                  <HoverPrefetchLink href="/partnership-inquiries">
                     Partnership Inquiries
-                  </Link>
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/support">Support</Link>
+                  <HoverPrefetchLink href="/support">Support</HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/contact">Contact</Link>
+                  <HoverPrefetchLink href="/contact">Contact</HoverPrefetchLink>
                 </li>
               </ul>
             </div>
@@ -267,116 +317,152 @@ export default function SitemapPage() {
               <ul>
                 <li className="linksHeading">WORKOUTS</li>
                 <li>
-                  <Link href="/article/custom_workout">Boxing</Link>
+                  <HoverPrefetchLink href="/article/custom_workout">
+                    Boxing
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/custom_workout">Thai Boxing</Link>
+                  <HoverPrefetchLink href="/article/custom_workout">
+                    Thai Boxing
+                  </HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">SCHEDULES</li>
                 <li>
-                  <Link href="/talent-representation/boxing">Boxing</Link>
+                  <HoverPrefetchLink href="/talent-representation/boxing">
+                    Boxing
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/news-mma">MMA</Link>
+                  <HoverPrefetchLink href="/news-mma">MMA</HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">PODCAST</li>
                 <li>
-                  <Link href="/podcasts/boxing">Boxing</Link>
+                  <HoverPrefetchLink href="/podcasts/boxing">
+                    Boxing
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/podcasts/mma">MMA</Link>
+                  <HoverPrefetchLink href="/podcasts/mma">
+                    MMA
+                  </HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">MVP FIT</li>
                 <li>
-                  <Link href="/article/skills">Skill Development</Link>
+                  <HoverPrefetchLink href="/article/skills">
+                    Skill Development
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/athlete-assessment">
+                  <HoverPrefetchLink href="/article/athlete-assessment">
                     Athlete Assessment
-                  </Link>
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/fitness_training">Fitness Training</Link>
+                  <HoverPrefetchLink href="/article/fitness_training">
+                    Fitness Training
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/custom_workout">Custom Workout</Link>
+                  <HoverPrefetchLink href="/article/custom_workout">
+                    Custom Workout
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/corp_performance">
+                  <HoverPrefetchLink href="/article/corp_performance">
                     Corp. Performance
-                  </Link>
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/speed">Speed Training</Link>
+                  <HoverPrefetchLink href="/article/speed">
+                    Speed Training
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/injury_prevention">
+                  <HoverPrefetchLink href="/article/injury_prevention">
                     Injury Prevention
-                  </Link>
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/biomechanicstechnique">
+                  <HoverPrefetchLink href="/article/biomechanicstechnique">
                     Biomechanics
-                  </Link>
+                  </HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">FIGHTER TOOLS</li>
                 <li>
-                  <Link href="/article/link-between-cte-and-football-players">
+                  <HoverPrefetchLink href="/article/link-between-cte-and-football-players">
                     Concussion
-                  </Link>
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/cut-treatment">Cut Treatment</Link>
+                  <HoverPrefetchLink href="/article/cut-treatment">
+                    Cut Treatment
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/womens-sports-injuries">Q-Angle</Link>
+                  <HoverPrefetchLink href="/article/womens-sports-injuries">
+                    Q-Angle
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/vo2-max">VO2-MAX</Link>
+                  <HoverPrefetchLink href="/article/vo2-max">
+                    VO2-MAX
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/taping-and-bracing">
+                  <HoverPrefetchLink href="/article/taping-and-bracing">
                     Taping & Bracing
-                  </Link>
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/for-women">For Women</Link>
+                  <HoverPrefetchLink href="/article/for-women">
+                    For Women
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/tabata-protocol">Tabata Protocol</Link>
+                  <HoverPrefetchLink href="/article/tabata-protocol">
+                    Tabata Protocol
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/article/lactate-threshold">
+                  <HoverPrefetchLink href="/article/lactate-threshold">
                     Lactate Threshold
-                  </Link>
+                  </HoverPrefetchLink>
                 </li>
               </ul>
 
               <ul>
                 <li className="linksHeading">LEGAL</li>
                 <li>
-                  <Link href="/privacy_policy">Privacy Policy</Link>
+                  <HoverPrefetchLink href="/privacy_policy">
+                    Privacy Policy
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/terms_of_use">Terms of Use</Link>
+                  <HoverPrefetchLink href="/terms_of_use">
+                    Terms of Use
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/advertise_with_us">Advertise With Us</Link>
+                  <HoverPrefetchLink href="/advertise_with_us">
+                    Advertise With Us
+                  </HoverPrefetchLink>
                 </li>
                 <li>
-                  <Link href="/cookie_policy">Cookie Policy</Link>
+                  <HoverPrefetchLink href="/cookie_policy">
+                    Cookie Policy
+                  </HoverPrefetchLink>
                 </li>
               </ul>
             </div>
