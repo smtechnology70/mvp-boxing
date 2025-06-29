@@ -6,7 +6,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import HoverPrefetchLink from "@/components/HoverPrefetchLink";
 
-const Slider = dynamic(() => import("react-slick"), { ssr: false });
+const Slider = dynamic(() => import("react-slick").then((mod) => mod.default), {
+  ssr: false,
+});
 
 const createMarkup = (htmlString) => {
   return { __html: htmlString };
@@ -33,7 +35,7 @@ const Podcast = (props) => {
   const [loading, setLoading] = useState(false);
   const [pagedata, setPagedata] = useState("");
 
-  var settings = {
+  const settings = {
     infinite: true,
     slidesToShow: 2,
     swipeToSlide: true,
