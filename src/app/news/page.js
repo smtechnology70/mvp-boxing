@@ -1,14 +1,14 @@
 // app/news/page.js
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 import GLOBALS from "@/server/Globals";
 import Loader from "@/components/Loader";
 
-export default function NewsPage() {
+function NewsPageContent() {
   const searchParams = useSearchParams();
   const p = searchParams.get("p") || "1";
 
@@ -66,7 +66,7 @@ export default function NewsPage() {
               </Link>
             </div>
           </div>
-             <br/>
+          <br />
           {/* Articles List */}
           <div className="news_data_container">
             {pagedata.map((item) => (
@@ -123,5 +123,13 @@ export default function NewsPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function NewsPage() {
+  return (
+    <Suspense fallback={<Loader loading={true} />}>
+      <NewsPageContent />
+    </Suspense>
   );
 }

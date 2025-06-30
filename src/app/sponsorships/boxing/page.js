@@ -81,7 +81,7 @@ const SponsorshipBox = (props) => {
           <Link
             className="page__links__link btn feat-link"
             target="_self"
-            to="/contact"
+            href="/contact"
           >
             <strong>Contact Us</strong>
             <i className="fa fa-chevron-right" aria-hidden="true" />

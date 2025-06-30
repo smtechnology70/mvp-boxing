@@ -1,14 +1,14 @@
 // app/espanol-amm/page.js
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 import GLOBALS from "@/server/Globals";
 import Loader from "@/components/Loader";
 
-export default function EspanolMmaPage() {
+function EspanolMmaPageContent() {
   // Read ?p= from URL, default to 1
   const searchParams = useSearchParams();
   const pParam = searchParams.get("p");
@@ -153,5 +153,13 @@ export default function EspanolMmaPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function EspanolMmaPage() {
+  return (
+    <Suspense fallback={<Loader loading={true} />}>
+      <EspanolMmaPageContent />
+    </Suspense>
   );
 }

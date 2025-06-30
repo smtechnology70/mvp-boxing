@@ -102,12 +102,12 @@ const Sponsorships = (props) => {
           </p>
           <ul className="expertise">
             <li>
-              <Link to="/sponsorships/boxing" alt="Boxing" title="Boxing">
+              <Link href="/sponsorships/boxing" alt="Boxing" title="Boxing">
                 &gt;&nbsp;Boxing
               </Link>
             </li>
             <li>
-              <Link to="/sponsorships/mma" alt="MMA" title="MMA">
+              <Link href="/sponsorships/mma" alt="MMA" title="MMA">
                 &gt;&nbsp;MMA
               </Link>
             </li>
@@ -118,7 +118,7 @@ const Sponsorships = (props) => {
           <Link
             className="page__links__link btn feat-link"
             target="_self"
-            to="/contact"
+            href="/contact"
           >
             <strong>Contact Us</strong>
             <i className="fa fa-chevron-right" aria-hidden="true" />

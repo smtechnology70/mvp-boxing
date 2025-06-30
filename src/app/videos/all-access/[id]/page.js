@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams, useParams } from "next/navigation";
 import $ from "jquery";
 
-const AllTraining = (props) => {
+const AllTrainingContent = (props) => {
   const { id } = useParams();
 
   const [loading, setLoading] = useState(false);
@@ -68,7 +68,7 @@ const AllTraining = (props) => {
                         return (
                           <li>
                             <Link
-                              to={"/" + item.alias}
+                              href={"/" + item.alias}
                               title={item.title}
                               onClick={changeVideoPlay}
                             >
@@ -110,10 +110,10 @@ const AllTraining = (props) => {
                 ALL ACCESS{" "}
               </div>
               <div className="arrows">
-                <Link to="/videos/boxing-training/art-of-the-jab">
+                <Link href="/videos/boxing-training/art-of-the-jab">
                   <i className="fa prev-arrow fa-caret-square-o-left" />
                 </Link>
-                <Link to="/videos/mma-training/5-stance-basics-mma-fighting">
+                <Link href="/videos/mma-training/5-stance-basics-mma-fighting">
                   <i className="fa prev-arrow fa-caret-square-o-right" />
                 </Link>
               </div>
@@ -134,7 +134,7 @@ const AllTraining = (props) => {
                       >
                         <Link
                           itemProp="url"
-                          to={"/" + item.alias}
+                          href={"/" + item.alias}
                           title={item.title}
                           onClick={changeVideoPlay}
                         >
@@ -163,13 +163,13 @@ const AllTraining = (props) => {
                 </ul>
               </div>
               <div className="slick-dots">
-                <Link to="/videos/all-access/FIGHT-HIGHLIGHTS-Josh-Warrington-vs-Luis-Alberto-Lopez">
+                <Link href="/videos/all-access/FIGHT-HIGHLIGHTS-Josh-Warrington-vs-Luis-Alberto-Lopez">
                   <i className="fa fa-circle " />
                 </Link>
-                <Link to="/videos/boxing-training/art-of-the-jab">
+                <Link href="/videos/boxing-training/art-of-the-jab">
                   <i className="fa fa-circle active" />
                 </Link>
-                <Link to="/videos/mma-training/5-stance-basics-mma-fighting">
+                <Link href="/videos/mma-training/5-stance-basics-mma-fighting">
                   <i className="fa fa-circle  " />
                 </Link>
               </div>
@@ -280,5 +280,11 @@ const AllTraining = (props) => {
     </div>
   );
 };
+
+const AllTraining = (props) => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <AllTrainingContent {...props} />
+  </Suspense>
+);
 
 export default AllTraining;

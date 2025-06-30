@@ -1,14 +1,14 @@
 // app/espanol-boxeo/page.js
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 import GLOBALS from "@/server/Globals";
 import Loader from "@/components/Loader";
 
-export default function EspanolBoxeoPage() {
+function EspanolBoxeoPageContent() {
   // read `?p=` from URL, default to 1
   const searchParams = useSearchParams();
   const pParam = searchParams.get("p");
@@ -156,5 +156,13 @@ export default function EspanolBoxeoPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function EspanolBoxeoPage() {
+  return (
+    <Suspense fallback={<Loader loading={true} />}>
+      <EspanolBoxeoPageContent />
+    </Suspense>
   );
 }

@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import GLOBALS from "@/server/Globals";
 import Link from "next/link";
 import { useSearchParams, useParams } from "next/navigation";
 import $ from "jquery";
 
-const MMATraining = (props) => {
+const MMATrainingContent = (props) => {
   const { id } = useParams();
 
   const [loading, setLoading] = useState(false);
@@ -69,7 +69,7 @@ const MMATraining = (props) => {
                         return (
                           <li>
                             <Link
-                              to={"/" + item.aliase}
+                              href={"/" + item.aliase}
                               title={item.title}
                               onClick={changeVideoPlay}
                             >
@@ -111,10 +111,10 @@ const MMATraining = (props) => {
                 ALL ACCESS{" "}
               </div>
               <div className="arrows">
-                <Link to="/videos/all-access/FIGHT-HIGHLIGHTS-Josh-Warrington-vs-Luis-Alberto-Lopez">
+                <Link href="/videos/all-access/FIGHT-HIGHLIGHTS-Josh-Warrington-vs-Luis-Alberto-Lopez">
                   <i className="fa prev-arrow fa-caret-square-o-left" />
                 </Link>
-                <Link to="/videos/boxing-training/art-of-the-jab">
+                <Link href="/videos/boxing-training/art-of-the-jab">
                   <i className="fa prev-arrow fa-caret-square-o-right" />
                 </Link>
               </div>
@@ -135,7 +135,7 @@ const MMATraining = (props) => {
                       >
                         <Link
                           itemProp="url"
-                          to={"/" + item.aliase}
+                          href={"/" + item.aliase}
                           title={item.title}
                           onClick={changeVideoPlay}
                         >
@@ -164,13 +164,13 @@ const MMATraining = (props) => {
                 </ul>
               </div>
               <div className="slick-dots">
-                <Link to="/videos/all-access/FIGHT-HIGHLIGHTS-Josh-Warrington-vs-Luis-Alberto-Lopez">
+                <Link href="/videos/all-access/FIGHT-HIGHLIGHTS-Josh-Warrington-vs-Luis-Alberto-Lopez">
                   <i className="fa fa-circle " />
                 </Link>
-                <Link to="/videos/boxing-training/art-of-the-jab">
+                <Link href="/videos/boxing-training/art-of-the-jab">
                   <i className="fa fa-circle active" />
                 </Link>
-                <Link to="/videos/mma-training/5-stance-basics-mma-fighting">
+                <Link href="/videos/mma-training/5-stance-basics-mma-fighting">
                   <i className="fa fa-circle  " />
                 </Link>
               </div>
@@ -281,5 +281,11 @@ const MMATraining = (props) => {
     </div>
   );
 };
+
+const MMATraining = (props) => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <MMATrainingContent {...props} />
+  </Suspense>
+);
 
 export default MMATraining;
