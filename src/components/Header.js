@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import HoverPrefetchLink from "@/components/HoverPrefetchLink";
 import { useRouter } from "next/navigation";
 // import Image from 'next/image'; // Uncomment if you want to use next/image for local images
 
@@ -156,14 +156,14 @@ export default function Header() {
             </svg>
           </button>
 
-          <Link href="/" className="navbar-brand p-0 m-0">
+          <HoverPrefetchLink href="/" className="navbar-brand p-0 m-0">
             <img
               className="logo_image ls-is-cached lazyloaded"
               data-src="https://www.mvpboxing.com/assets/images/logo-new.png"
               alt="MVP BOXING"
               src="https://www.mvpboxing.com/assets/images/logo-new.png"
             />
-          </Link>
+          </HoverPrefetchLink>
 
           <div className="action">
             <a href="#" className="Watch" onClick={menuToggle}>
@@ -206,15 +206,19 @@ export default function Header() {
             </div>
           </div>
 
-          <Link href="/launchingsoon" className="fightclub" id="fightclub_id">
+          <HoverPrefetchLink
+            href="/launchingsoon"
+            className="fightclub"
+            id="fightclub_id"
+          >
             <p className="fightclub_text">FIGHT</p>
             <img className="m_latter" src={img2.src} alt="Gold Crown" />
             <p className="fightclub_text_club">CLUB</p>
-          </Link>
+          </HoverPrefetchLink>
 
-          <Link href="/launchingsoons">
+          <HoverPrefetchLink href="/launchingsoons">
             <img className="avder_img" src={img1.src} alt="Avatar" />
-          </Link>
+          </HoverPrefetchLink>
         </div>
 
         {/* SideNav for mobile */}
@@ -272,14 +276,14 @@ export default function Header() {
                     <>
                       {item.submenu.length < 1 ? (
                         <div key={k} className="menu-list">
-                          <Link
+                          <HoverPrefetchLink
                             className="main-menu first text-truncate menu-item"
                             title={item.name}
                             href={menuUrl}
                             onClick={closeHamburgerMenu}
                           >
                             <div className="menu-txt fnt15">{item.name}</div>
-                          </Link>
+                          </HoverPrefetchLink>
                         </div>
                       ) : (
                         <div className="menu-list">
@@ -300,7 +304,7 @@ export default function Header() {
                                   : submenuItem.menu_alias;
                               return (
                                 <li key={s} className>
-                                  <Link
+                                  <HoverPrefetchLink
                                     className="menu-item"
                                     title={submenuItem.title}
                                     href={submenuUrl}
@@ -309,7 +313,7 @@ export default function Header() {
                                     <div className="fnt14 inner-menu inner-menu-link text-truncate">
                                       {submenuItem.title}
                                     </div>
-                                  </Link>
+                                  </HoverPrefetchLink>
                                 </li>
                               );
                             })}
@@ -346,44 +350,44 @@ export default function Header() {
               {/* </div> */}
               <div id="menu-footer">
                 <div className="menu-list">
-                  <Link
+                  <HoverPrefetchLink
                     className="main-menu text-truncate"
                     title="Privacy Policy"
                     href="/Privacy_Policy"
                     onClick={closeHamburgerMenu}
                   >
                     <div className="menu-txt fnt14">Privacy Policy</div>
-                  </Link>
+                  </HoverPrefetchLink>
                 </div>
                 <div className="menu-list">
-                  <Link
+                  <HoverPrefetchLink
                     className="main-menu text-truncate"
                     title="Terms of Use"
                     href="/Terms_of_use"
                     onClick={closeHamburgerMenu}
                   >
                     <div className="menu-txt fnt14">Terms of Use</div>
-                  </Link>
+                  </HoverPrefetchLink>
                 </div>
                 <div className="menu-list">
-                  <Link
+                  <HoverPrefetchLink
                     className="main-menu text-truncate"
                     title="Advertise With Us"
                     href="/Advertise_With_Us"
                     onClick={closeHamburgerMenu}
                   >
                     <div className="menu-txt fnt14">Advertise With Us</div>
-                  </Link>
+                  </HoverPrefetchLink>
                 </div>
                 <div className="menu-list">
-                  <Link
+                  <HoverPrefetchLink
                     className="main-menu text-truncate"
                     title="Cookie Policy"
                     href="/Cookie_Policy"
                     onClick={closeHamburgerMenu}
                   >
                     <div className="menu-txt fnt14">Cookie Policy</div>
-                  </Link>
+                  </HoverPrefetchLink>
                 </div>
               </div>
             </div>
@@ -481,40 +485,40 @@ export default function Header() {
                   {/* </div> */}
                   <div id="menu-footer">
                     <div className="menu-list">
-                      <Link
+                      <HoverPrefetchLink
                         className="main-menu text-truncate"
                         title="Privacy Policy"
                         href="/Privacy_Policy"
                       >
                         <div className="menu-txt fnt14">Privacy Policy</div>
-                      </Link>
+                      </HoverPrefetchLink>
                     </div>
                     <div className="menu-list">
-                      <Link
+                      <HoverPrefetchLink
                         className="main-menu text-truncate"
                         title="Terms of Use"
                         href="/Terms_of_use"
                       >
                         <div className="menu-txt fnt14">Terms of Use</div>
-                      </Link>
+                      </HoverPrefetchLink>
                     </div>
                     <div className="menu-list">
-                      <Link
+                      <HoverPrefetchLink
                         className="main-menu text-truncate"
                         title="Advertise With Us"
                         href="/Advertise_With_Us"
                       >
                         <div className="menu-txt fnt14">Advertise With Us</div>
-                      </Link>
+                      </HoverPrefetchLink>
                     </div>
                     <div className="menu-list">
-                      <Link
+                      <HoverPrefetchLink
                         className="main-menu text-truncate"
                         title="Cookie Policy"
                         href="/Cookie_Policy"
                       >
                         <div className="menu-txt fnt14">Cookie Policy</div>
-                      </Link>
+                      </HoverPrefetchLink>
                     </div>
                   </div>
                 </div>
@@ -531,13 +535,13 @@ export default function Header() {
                 <>
                   {item.submenu.length < 1 ? (
                     <li key={i} className="menuHover">
-                      <Link
+                      <HoverPrefetchLink
                         target={item.is_new_tab == 1 ? "_blank" : ""}
                         href={item.menu_alias}
                         id="home_1"
                       >
                         {item.name}
-                      </Link>
+                      </HoverPrefetchLink>
                     </li>
                   ) : (
                     <li
@@ -545,9 +549,9 @@ export default function Header() {
                       className="menuHover"
                       onMouseOver={setMouseOverEvent}
                     >
-                      <Link id="news_2" href="#">
+                      <HoverPrefetchLink id="news_2" href="#">
                         {item.name}
-                      </Link>
+                      </HoverPrefetchLink>
                       {showsubmenu ? (
                         <ul key={"dropdown" + i} className="news-dropdown">
                           <li className id="HEADLINES">
@@ -563,13 +567,13 @@ export default function Header() {
                                     : sidebarItem.url;
                                 return (
                                   <div key={"sidebarmenu" + m}>
-                                    <Link
+                                    <HoverPrefetchLink
                                       href={menuUrl}
                                       title="BOXING & MMA News"
                                       onClick={mouseOutEvent}
                                     >
                                       {sidebarItem.menu_name}
-                                    </Link>
+                                    </HoverPrefetchLink>
                                     <i
                                       className="fa fa-chevron-right"
                                       aria-hidden="true"
@@ -592,7 +596,7 @@ export default function Header() {
                                       style={{ height: 179 }}
                                     >
                                       <div className="frame-image">
-                                        <Link
+                                        <HoverPrefetchLink
                                           target={
                                             submenuItem.is_new_tab == 1
                                               ? "_blank"
@@ -608,7 +612,7 @@ export default function Header() {
                                             width={205}
                                             src={submenuItem.image}
                                           />
-                                        </Link>
+                                        </HoverPrefetchLink>
                                       </div>
                                       <div className="frame-caption">
                                         {submenuItem.caption}
@@ -636,40 +640,40 @@ export default function Header() {
         <div className="row nomargin">
           <ul className="nav w-100" style={{ justifyContent: "space-between" }}>
             <li className="nav-item">
-              <Link
+              <HoverPrefetchLink
                 className="nav-link text-truncate main-menu pl-1"
                 title="NEWS"
                 href="/news-boxing"
               >
                 NEWS
-              </Link>
+              </HoverPrefetchLink>
             </li>
             <li className="nav-item">
-              <Link
+              <HoverPrefetchLink
                 className="nav-link text-truncate main-menu "
                 title="ESPAÑOL"
                 href="/espanol-boxeo"
               >
                 ESPAÑOL
-              </Link>
+              </HoverPrefetchLink>
             </li>
             <li className="nav-item">
-              <Link
+              <HoverPrefetchLink
                 className="nav-link text-truncate main-menu pr-1"
                 title="betting"
                 href="https://sportsbook.fanduel.com/boxing"
               >
                 BETTING
-              </Link>
+              </HoverPrefetchLink>
             </li>
             <li className="nav-item">
-              <Link
+              <HoverPrefetchLink
                 className="nav-link text-truncate main-menu pr-1"
                 title="FIGHT ODDS"
                 href="/launchingsoons"
               >
                 FIGHT CLUB
-              </Link>
+              </HoverPrefetchLink>
             </li>
           </ul>
         </div>
