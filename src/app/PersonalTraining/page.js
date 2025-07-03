@@ -1,23 +1,21 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import { useEffect, useState } from "react";
 
 import GLOBALS from "@/server/Globals";
-import Loader from "@/components/Loader";
 
-const createMarkup = (htmlString) => {
-  return { __html: htmlString };
-};
+import $ from "jquery";
 
-export default function Angle() {
+const PersonalTraining = (props) => {
   const [loading, setLoading] = useState(false);
-  const [pagedata, setPagedata] = useState("");
+  const [newsdata, setNewsdata] = useState([]);
+
+  let currentPage = 1;
 
   useEffect(() => {
-    setLoading(true);
-    async function getData() {
-      const apiUrl = "cmspage?page_id=partnership-inquiries";
+    async function getData(currentPage) {
+      setLoading(true);
+      let apiUrl = "dropboxingnews?p=" + currentPage;
       const url = GLOBALS.API_BASE_URL + apiUrl;
       try {
         const response = await fetch(url);
@@ -25,60 +23,60 @@ export default function Angle() {
           throw new Error(`Response status: ${response.status}`);
         }
         const json = await response.json();
-        setPagedata(json.data.content);
+        setNewsdata(json.data);
+        setLoading(false);
       } catch (error) {
         console.error(error.message);
-      } finally {
-        setLoading(false);
       }
     }
-    getData();
+    getData(currentPage);
+
+    $(".nextPage").on("click", function () {
+      currentPage++;
+      getData(currentPage);
+    });
+
+    $(".previousPage").on("click", function () {
+      currentPage--;
+      if (currentPage > 0) {
+        getData(currentPage);
+      } else {
+        currentPage++;
+      }
+    });
+
+    return () => {
+      // Cleanup logic here
+    };
   }, []);
 
-  if (loading) {
-    return <Loader />;
-  }
-
   return (
-    <div
-      className="mvpBgContainer mvp_container"
-      id="newsMainContents"
-      style={{ width: "100%" }}
-    >
+    <div className="mvpBgContainer mvp_container" id="newsMainContent">
       <div
         className="news_articles_content"
         itemScope
         itemType="https://schema.org/Article"
-        style={{ width: "100%" }}
       >
-        <div className="left_content_area" style={{ margin: 0 }}>
+        <div className="left_content_area">
           <h1 className="titles_article border_titles_article1">
-            <span itemProp="name">{`Women's Sports Injuries | MVP Boxing`}</span>
+            <span itemProp="name">Personal Training</span>{" "}
             <div className="socialInfo">
               <div className="left">
-                MVPBOXING.COM&nbsp;|&nbsp;
+                mvpboxing &nbsp;|&nbsp;
                 <i className="fa fa-clock-o" aria-hidden="true" />
-                &nbsp;March 28, 2018, 04:08PM
+                &nbsp;March 28, 2018, 07:33PM{" "}
               </div>
               <div className="clear" />
             </div>
+            {/* ends (.socialInfo) */}
           </h1>
-
           <div className="workout_content update-workout_content">
-            <div style={{ margin: "25px 0" }}>
+            <div style={{ margin: "25px 0 25px 0" }}>
               <img
-                src="https://www.mvpboxing.com/assets/userfiles/images/womans_injuries.jpg"
-                alt="Women's Sports Injuries"
+                src="/assets/userfiles/images/personaltrainer.jpg"
                 style={{ width: "100%", height: "auto" }}
               />
             </div>
-
-            {/* If you need to render CMS content:
-            <div
-              className="cms-content"
-              dangerouslySetInnerHTML={createMarkup(pagedata)}
-            /> */}
-
             <div id="accordion" className="accordion">
               <div className="card mb-1">
                 <a
@@ -90,7 +88,7 @@ export default function Angle() {
                 >
                   <div className="card-header" id="heading0">
                     <h5 className="mb-0 question">
-                      <strong>What&apos;s a Q-Angle?</strong>
+                      <strong>Benefits of Hiring a Personal Trainer</strong>
                       <span className="right">
                         <i
                           className="arrow fa fa-arrow-down"
@@ -107,63 +105,60 @@ export default function Angle() {
                   data-parent="#accordion"
                 >
                   <div className="card-body">
-                    <p>
-                      <strong>Definition and Occurrence</strong>
-                    </p>
-                    <ol type="i" className="pl-1">
+                    <ul className="pl-1">
                       <li>
-                        Due to biomechanical differences, women are more
-                        susceptible to sports related injuries than men. The
-                        main difference is a woman’s wider pelvis; this female
-                        characteristic has been linked to what’s known as a
-                        larger Q-angle (Quadriceps Angle).
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;A qualified and properly trained personal trainer
+                        may assist you in safely starting and maintaining a
+                        sustainable an effective and efficient exercise
+                        program.&nbsp;
                       </li>
                       <li>
-                        The Q-angle is the angle at which the femur (upper leg
-                        bone) meets the tibia (lower leg bone). This is measured
-                        by creating two intersecting lines; one from the center
-                        of the patella (kneecap) to the anterior superior iliac
-                        spine of the pelvis (the part of the pelvis you can feel
-                        on the side of your lower abdomen), the other from the
-                        patellar tendon to the tibial tuberosity (on the tibia
-                        just below the knee).
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;A personal trainer will understand your “fitness
+                        goals” and help you achieve them in an effective and
+                        injury free approach.&nbsp;
                       </li>
                       <li>
-                        The Q-angle is best measured standing, because it
-                        replicates the normal weight-bearing forces on the knee
-                        joint. A normal standing Q-angle ranges from 18° to 22°,
-                        with women usually at the higher end due to a wider
-                        pelvis.
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;A personal trainer can be a great source of
+                        motivation and encouragement, as well as a resource for
+                        the latest objective health and fitness
+                        information.&nbsp;
                       </li>
                       <li>
-                        An increased Q-angle places extra stress on the knee
-                        joint and is linked to increased foot pronation in
-                        women. This makes the knee less stable under stress and
-                        contributes to a higher ACL tear risk in sports
-                        involving running, jumping, and pivoting.
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;A personal trainer may also help you fit exercise
+                        into your busy schedule and teach you how to effectively
+                        maximize your time in the gym.
                       </li>
-                      <li>
-                        An abnormal Q-angle can be compounded by a functional or
-                        anatomical “short leg” appearance—often actually related
-                        to pelvic tilt or Q-angle differences rather than true
-                        limb length discrepancy.
-                      </li>
-                    </ol>
+                    </ul>
                   </div>
                 </div>
               </div>
-
               <div className="card mb-1">
                 <a
                   className="text-left header"
                   data-toggle="collapse"
                   data-target="#collapse1"
-                  aria-expanded="false"
+                  aria-expanded="true"
                   aria-controls="collapse1"
                 >
                   <div className="card-header" id="heading1">
                     <h5 className="mb-0 question">
-                      <strong>Signs and Symptoms</strong>
+                      <strong>What is Offered?</strong>
                       <span className="right">
                         <i
                           className="arrow fa fa-arrow-right"
@@ -181,27 +176,59 @@ export default function Angle() {
                 >
                   <div className="card-body">
                     <p>
-                      An increased Q-angle may cause knee pain and muscle
-                      imbalance due to the quadriceps pulling on the patella. It
-                      can also lead to cartilage wear on the underside of the
-                      patella and increased ACL injury risk from knee
-                      instability.
+                      We provide high quality personal fitness training and
+                      boxing instruction in the following:
                     </p>
+                    <ul className="pl-1">
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;At the beginning of your personal training journey
+                        we conduct a full scale audit of dietary habits and make
+                        positive recommendations that are particular to how you
+                        eat, rather than making sweeping statements that may
+                        apply generally, but not necessarily to you
+                        specifically..&nbsp;
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;One-on-One Personal Fitness Training (weight loss,
+                        strength improvement, sports performance).&nbsp;
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;One-on-One Boxing Training
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Small Group Fitness and Boxing Training
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-
               <div className="card mb-1">
                 <a
                   className="text-left header"
                   data-toggle="collapse"
                   data-target="#collapse2"
-                  aria-expanded="false"
+                  aria-expanded="true"
                   aria-controls="collapse2"
                 >
                   <div className="card-header" id="heading2">
                     <h5 className="mb-0 question">
-                      <strong>Prehab (Prevention)</strong>
+                      <strong>Instructor Credentials</strong>
                       <span className="right">
                         <i
                           className="arrow fa fa-arrow-right"
@@ -219,28 +246,90 @@ export default function Angle() {
                 >
                   <div className="card-body">
                     <p>
-                      Strengthening programs like the ACL Injury Prevention
-                      Project and closed-chain exercises (e.g. wall squats to
-                      30° flexion) improve knee stability. Stretching the quads,
-                      hamstrings, IT band, and calves, plus plyometrics,
-                      proprioception, and hip/knee flexion drills, are also
-                      recommended.
+                      Manny Masson, is a professional who is dedicated to
+                      instructional excellence at all levels. Manny has earned a
+                      Bachelor of Science degree in Business Administration and
+                      Sports Science from University of Wisconsin.
                     </p>
+                    <p>
+                      {`He's trained and developed fighters that have competed at
+                      the elite level in their respective sports which have
+                      become world boxing champions in both the amateur, (2004
+                      Athens Olympic Games) and professional level. Listed below
+                      are world champions developed and trained by Manny Masson.`}
+                    </p>
+                    <ul className="pl-1">
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;{`Raul 'El Diamanté' Marquez`}
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;{`Sam 'Nigerian Nightmare' Peter`}
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;{`Yuriorkis 'El Ciclon de Guantanamo' Gamboa`}
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;{`Odlanier 'La Sombra' Solis`}
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Sinan Şamil Sam
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Zahir Raheem
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Herbie Hyde
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;{`Greg 'The Eagle' Soszynski`}
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-
               <div className="card mb-1">
                 <a
                   className="text-left header"
                   data-toggle="collapse"
                   data-target="#collapse3"
-                  aria-expanded="false"
+                  aria-expanded="true"
                   aria-controls="collapse3"
                 >
                   <div className="card-header" id="heading3">
                     <h5 className="mb-0 question">
-                      <strong>Treatment</strong>
+                      <strong>How Do I Get Started?</strong>
                       <span className="right">
                         <i
                           className="arrow fa fa-arrow-right"
@@ -257,43 +346,37 @@ export default function Angle() {
                   data-parent="#accordion"
                 >
                   <div className="card-body">
-                    <p>
-                      First correct any over-pronation with custom orthotics or
-                      insoles. Rehab focuses on restoring flexibility in calves,
-                      hamstrings, and quads, and strengthening the VMO (Vastus
-                      Medialis Oblique) to stabilize the patella.
-                    </p>
+                    <p>Contact Manny Masson</p>
                   </div>
                 </div>
               </div>
             </div>
-
-            <p>
-              Published by:&nbsp;<strong>mvpboxing.com</strong>
-            </p>
           </div>
-
+          {/* ends (.workout_content) */}
           <div className="page__links" style={{ marginBottom: 10 }}>
             <h3 className="page__links__title" />
-            <Link
+            <a
               className="page__links__link btn feat-link"
               target="_self"
-              href="/contact"
+              href="https://www.mvpboxing.com/contact-us"
             >
               <strong>Contact Us</strong>
               <i className="fa fa-chevron-right" aria-hidden="true" />
-            </Link>
+            </a>
           </div>
-
           <div className="content-separator">&nbsp;</div>
-
+          {/* ends (.content-separator) */}
           <div className="socialInfo">
+            {/* <div class="left back-to-info">
+          <a href="#" id="goTop" title="Back To Top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
+      </div> */}
             <div className="text-center social-sharing-info bottom-social-share">
               <p className="social-share-block">
                 <i className="share-icon fas fa-share-alt" aria-hidden="true" />
+                {/* AddToAny BEGIN */}
                 <span
                   className="social-icons a2a_kit a2a_kit_size_32 a2a_default_style"
-                  style={{ lineHeight: 0 }}
+                  style={{ lineHeight: 32 }}
                 >
                   <a
                     className="a2a_button_facebook"
@@ -475,11 +558,16 @@ export default function Angle() {
                 </span>
               </p>
               <div style={{ clear: "both" }} />
-              <p />
+              {/* AddToAny END */} <p />
             </div>
           </div>
+          {/* ends (.social-sharing-info) */}
+          <div className="clear" />
         </div>
+        {/* ends (.socialInfo) */}
       </div>
     </div>
   );
-}
+};
+
+export default PersonalTraining;

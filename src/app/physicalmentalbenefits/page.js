@@ -1,23 +1,21 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import { useEffect, useState } from "react";
 
 import GLOBALS from "@/server/Globals";
-import Loader from "@/components/Loader";
 
-const createMarkup = (htmlString) => {
-  return { __html: htmlString };
-};
+import $ from "jquery";
 
-export default function Angle() {
+const PhysicalMentalBenefits = (props) => {
   const [loading, setLoading] = useState(false);
-  const [pagedata, setPagedata] = useState("");
+  const [newsdata, setNewsdata] = useState([]);
+
+  let currentPage = 1;
 
   useEffect(() => {
-    setLoading(true);
-    async function getData() {
-      const apiUrl = "cmspage?page_id=partnership-inquiries";
+    async function getData(currentPage) {
+      setLoading(true);
+      let apiUrl = "dropboxingnews?p=" + currentPage;
       const url = GLOBALS.API_BASE_URL + apiUrl;
       try {
         const response = await fetch(url);
@@ -25,60 +23,44 @@ export default function Angle() {
           throw new Error(`Response status: ${response.status}`);
         }
         const json = await response.json();
-        setPagedata(json.data.content);
+        setNewsdata(json.data);
+        setLoading(false);
       } catch (error) {
         console.error(error.message);
-      } finally {
-        setLoading(false);
       }
     }
-    getData();
+    getData(currentPage);
+
+    $(".nextPage").on("click", function () {
+      currentPage++;
+      getData(currentPage);
+    });
+
+    $(".previousPage").on("click", function () {
+      currentPage--;
+      if (currentPage > 0) {
+        getData(currentPage);
+      } else {
+        currentPage++;
+      }
+    });
+
+    return () => {
+      // Cleanup logic here
+    };
   }, []);
 
-  if (loading) {
-    return <Loader />;
-  }
-
   return (
-    <div
-      className="mvpBgContainer mvp_container"
-      id="newsMainContents"
-      style={{ width: "100%" }}
-    >
-      <div
-        className="news_articles_content"
-        itemScope
-        itemType="https://schema.org/Article"
-        style={{ width: "100%" }}
-      >
-        <div className="left_content_area" style={{ margin: 0 }}>
-          <h1 className="titles_article border_titles_article1">
-            <span itemProp="name">{`Women's Sports Injuries | MVP Boxing`}</span>
-            <div className="socialInfo">
-              <div className="left">
-                MVPBOXING.COM&nbsp;|&nbsp;
-                <i className="fa fa-clock-o" aria-hidden="true" />
-                &nbsp;March 28, 2018, 04:08PM
-              </div>
-              <div className="clear" />
-            </div>
-          </h1>
-
-          <div className="workout_content update-workout_content">
-            <div style={{ margin: "25px 0" }}>
-              <img
-                src="https://www.mvpboxing.com/assets/userfiles/images/womans_injuries.jpg"
-                alt="Women's Sports Injuries"
-                style={{ width: "100%", height: "auto" }}
-              />
-            </div>
-
-            {/* If you need to render CMS content:
-            <div
-              className="cms-content"
-              dangerouslySetInnerHTML={createMarkup(pagedata)}
-            /> */}
-
+    <div className="mvpBgContainer mvp_container" id="newsMainContent">
+      <div className="article_area_content">
+        <h1 className="titles_article border_titles_article">
+          PHYSICAL &amp; MENTAL BENEFITS
+        </h1>
+        <div
+          className="workout_content borderNone text-left size-n-col11 margin-bottom-0"
+          style={{ textAlign: "justify" }}
+        >
+          <div className="mainContentBlock section sectionMain">
             <div id="accordion" className="accordion">
               <div className="card mb-1">
                 <a
@@ -90,7 +72,7 @@ export default function Angle() {
                 >
                   <div className="card-header" id="heading0">
                     <h5 className="mb-0 question">
-                      <strong>What&apos;s a Q-Angle?</strong>
+                      <strong>Introduction</strong>
                       <span className="right">
                         <i
                           className="arrow fa fa-arrow-down"
@@ -107,63 +89,30 @@ export default function Angle() {
                   data-parent="#accordion"
                 >
                   <div className="card-body">
-                    <p>
-                      <strong>Definition and Occurrence</strong>
-                    </p>
-                    <ol type="i" className="pl-1">
-                      <li>
-                        Due to biomechanical differences, women are more
-                        susceptible to sports related injuries than men. The
-                        main difference is a woman’s wider pelvis; this female
-                        characteristic has been linked to what’s known as a
-                        larger Q-angle (Quadriceps Angle).
-                      </li>
-                      <li>
-                        The Q-angle is the angle at which the femur (upper leg
-                        bone) meets the tibia (lower leg bone). This is measured
-                        by creating two intersecting lines; one from the center
-                        of the patella (kneecap) to the anterior superior iliac
-                        spine of the pelvis (the part of the pelvis you can feel
-                        on the side of your lower abdomen), the other from the
-                        patellar tendon to the tibial tuberosity (on the tibia
-                        just below the knee).
-                      </li>
-                      <li>
-                        The Q-angle is best measured standing, because it
-                        replicates the normal weight-bearing forces on the knee
-                        joint. A normal standing Q-angle ranges from 18° to 22°,
-                        with women usually at the higher end due to a wider
-                        pelvis.
-                      </li>
-                      <li>
-                        An increased Q-angle places extra stress on the knee
-                        joint and is linked to increased foot pronation in
-                        women. This makes the knee less stable under stress and
-                        contributes to a higher ACL tear risk in sports
-                        involving running, jumping, and pivoting.
-                      </li>
-                      <li>
-                        An abnormal Q-angle can be compounded by a functional or
-                        anatomical “short leg” appearance—often actually related
-                        to pelvic tilt or Q-angle differences rather than true
-                        limb length discrepancy.
-                      </li>
-                    </ol>
+                    <strong>
+                      Sharing knowledge and helping others reach the full extent
+                      of their potential is what we do best.
+                    </strong>
+                    <br />
+                    <br />
+                    This is why Manny Masson has developed proven teaching
+                    methods that will not only help you learn quickly and easily
+                    but also provide a wide range of benefits for students of
+                    all ages.
                   </div>
                 </div>
               </div>
-
               <div className="card mb-1">
                 <a
                   className="text-left header"
                   data-toggle="collapse"
                   data-target="#collapse1"
-                  aria-expanded="false"
+                  aria-expanded="true"
                   aria-controls="collapse1"
                 >
                   <div className="card-header" id="heading1">
                     <h5 className="mb-0 question">
-                      <strong>Signs and Symptoms</strong>
+                      <strong>Physical benefits</strong>
                       <span className="right">
                         <i
                           className="arrow fa fa-arrow-right"
@@ -180,28 +129,85 @@ export default function Angle() {
                   data-parent="#accordion"
                 >
                   <div className="card-body">
-                    <p>
-                      An increased Q-angle may cause knee pain and muscle
-                      imbalance due to the quadriceps pulling on the patella. It
-                      can also lead to cartilage wear on the underside of the
-                      patella and increased ACL injury risk from knee
-                      instability.
-                    </p>
+                    <ul className="pl-1">
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Improved reflexes and coordination
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Increased speed and power
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Increased energy level
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Improved appearance and muscle tone
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Increased strength and stamina
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Better balance and body awareness
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Improved flexibility
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Weight loss and control
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Better health and longevity
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-
               <div className="card mb-1">
                 <a
                   className="text-left header"
                   data-toggle="collapse"
                   data-target="#collapse2"
-                  aria-expanded="false"
+                  aria-expanded="true"
                   aria-controls="collapse2"
                 >
                   <div className="card-header" id="heading2">
                     <h5 className="mb-0 question">
-                      <strong>Prehab (Prevention)</strong>
+                      <strong>Mental benefits</strong>
                       <span className="right">
                         <i
                           className="arrow fa fa-arrow-right"
@@ -218,29 +224,59 @@ export default function Angle() {
                   data-parent="#accordion"
                 >
                   <div className="card-body">
-                    <p>
-                      Strengthening programs like the ACL Injury Prevention
-                      Project and closed-chain exercises (e.g. wall squats to
-                      30° flexion) improve knee stability. Stretching the quads,
-                      hamstrings, IT band, and calves, plus plyometrics,
-                      proprioception, and hip/knee flexion drills, are also
-                      recommended.
-                    </p>
+                    <ul className="pl-1">
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Improved self-image and self-esteem
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Increased self-confidence and positive attitude
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;
+                        {`Greater self-discipline and a "can do" attitude`}
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Improved concentration, work and study habits
+                      </li>
+                      <li>
+                        <i
+                          className="fa fa-check-square-o"
+                          aria-hidden="true"
+                        />
+                        &nbsp;Stress reduction and increased levels of
+                        relaxation
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-
               <div className="card mb-1">
                 <a
                   className="text-left header"
                   data-toggle="collapse"
                   data-target="#collapse3"
-                  aria-expanded="false"
+                  aria-expanded="true"
                   aria-controls="collapse3"
                 >
                   <div className="card-header" id="heading3">
                     <h5 className="mb-0 question">
-                      <strong>Treatment</strong>
+                      <strong>Self Confidence</strong>
                       <span className="right">
                         <i
                           className="arrow fa fa-arrow-right"
@@ -257,43 +293,27 @@ export default function Angle() {
                   data-parent="#accordion"
                 >
                   <div className="card-body">
-                    <p>
-                      First correct any over-pronation with custom orthotics or
-                      insoles. Rehab focuses on restoring flexibility in calves,
-                      hamstrings, and quads, and strengthening the VMO (Vastus
-                      Medialis Oblique) to stabilize the patella.
-                    </p>
+                    Know that you possess the knowledge that you are able to
+                    protect yourself and your loved ones should a life
+                    threatening situation arise.
                   </div>
                 </div>
               </div>
             </div>
-
-            <p>
-              Published by:&nbsp;<strong>mvpboxing.com</strong>
-            </p>
           </div>
-
-          <div className="page__links" style={{ marginBottom: 10 }}>
-            <h3 className="page__links__title" />
-            <Link
-              className="page__links__link btn feat-link"
-              target="_self"
-              href="/contact"
-            >
-              <strong>Contact Us</strong>
-              <i className="fa fa-chevron-right" aria-hidden="true" />
-            </Link>
-          </div>
-
           <div className="content-separator">&nbsp;</div>
-
+          {/* ends (.content-separator) */}
           <div className="socialInfo">
+            {/* <div class="left back-to-info">
+          <a href="#" id="goTop" title="Back To Top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
+      </div> */}
             <div className="text-center social-sharing-info bottom-social-share">
               <p className="social-share-block">
                 <i className="share-icon fas fa-share-alt" aria-hidden="true" />
+                {/* AddToAny BEGIN */}
                 <span
                   className="social-icons a2a_kit a2a_kit_size_32 a2a_default_style"
-                  style={{ lineHeight: 0 }}
+                  style={{ lineHeight: 32 }}
                 >
                   <a
                     className="a2a_button_facebook"
@@ -475,11 +495,16 @@ export default function Angle() {
                 </span>
               </p>
               <div style={{ clear: "both" }} />
-              <p />
+              {/* AddToAny END */} <p />
             </div>
           </div>
+          {/* ends (.social-sharing-info) */}
+          <div className="clear" />
         </div>
+        {/* ends (.socialInfo) */}
       </div>
     </div>
   );
-}
+};
+
+export default PhysicalMentalBenefits;

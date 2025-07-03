@@ -92,7 +92,7 @@ export default function CutTreatment() {
                 >
                   <div className="card-header" id="heading0">
                     <h5 className="mb-0 question">
-                      <strong>What's a Cut-man in boxing?</strong>
+                      <strong>{`What's a Cut-man in boxing?`}</strong>
                       <span className="right">
                         <i
                           className="arrow fa fa-arrow-down"
@@ -143,8 +143,8 @@ export default function CutTreatment() {
                       certification required to become a cutman, the art is
                       learned through self-education, on-the-job training, and
                       apprenticeship. The industry standard regarding
-                      compensation ranges from 1-5% (net) of a fighter's prize
-                      money.
+                      compensation ranges from 1-5% (net) of a fighter&apos;s
+                      prize money.
                     </p>
                   </div>
                 </div>
@@ -598,17 +598,17 @@ export default function CutTreatment() {
                 >
                   <div className="card-body">
                     <p>
-                      Monsel's solution: This outlawed agent quickly stops blood
-                      flow by chemically cauterizing the tissues surrounding the
-                      cut and a side effect of its use is the generation of scar
-                      tissue. This scar tissue is hazardous to an active
-                      fighter’s health and safety in that there’s an increased
-                      risk of re-injuring the scar site when direct force from a
-                      punch is absorbed. The application of Monsel’s solution
-                      can be spotted by a dark ring of damaged tissue around the
-                      cut. Monsel's solution is an iron subsulfate solution and,
-                      contrary to popular misconception, contains no lead in its
-                      composition.
+                      Monsel&apos;s solution: This outlawed agent quickly stops
+                      blood flow by chemically cauterizing the tissues
+                      surrounding the cut and a side effect of its use is the
+                      generation of scar tissue. This scar tissue is hazardous
+                      to an active fighter’s health and safety in that there’s
+                      an increased risk of re-injuring the scar site when direct
+                      force from a punch is absorbed. The application of
+                      Monsel’s solution can be spotted by a dark ring of damaged
+                      tissue around the cut. Monsel&apos;s solution is an iron
+                      subsulfate solution and, contrary to popular
+                      misconception, contains no lead in its composition.
                     </p>
                     <p>
                       One final note on cut care...petroleum jelly should always

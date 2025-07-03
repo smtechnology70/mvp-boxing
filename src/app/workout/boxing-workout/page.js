@@ -1,60 +1,52 @@
-// pages/fights-schedule.js
-"use client"; // Next.js 14+ React-App-Router convention; if using Pages Router alone, you can omit
-import React, { useState, useEffect, useRef } from "react";
-import $ from "jquery";
+"use client";
+
+import { useEffect, useState } from "react";
 
 import GLOBALS from "@/server/Globals";
-import Loader from "@/components/Loader";
+
+import $ from "jquery";
 import Link from "next/link";
 
-export default function FightSchedules() {
-  const [loading, setLoading] = useState(true);
-  const [contentHtml, setContentHtml] = useState("");
-  const upcomingRef = useRef(null);
-  const previousRef = useRef(null);
+const createMarkup = (htmlString) => {
+  return { __html: htmlString };
+};
+
+const WorkoutBoxing = (props) => {
+  const [loading, setLoading] = useState(false);
+  const [pagedata, setPagedata] = useState([]);
 
   useEffect(() => {
+    $(".DYBOXING_TRAINING_contend1").on("click", function () {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+    });
+    setLoading(true);
     async function getData() {
+      let apiUrl = "trainings?trainning_type=dynamic_boxing";
+      const url = GLOBALS.API_BASE_URL + apiUrl;
       try {
-        const res = await fetch(
-          `${GLOBALS.API_BASE_URL}/cmspage?page_id=contact-us`
-        );
-        if (!res.ok) throw new Error(res.status);
-        const json = await res.json();
-        setContentHtml(json.data.content);
-      } catch (err) {
-        setContentHtml("<p>Unable to load content.</p>");
-        console.error(err);
-      } finally {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`Response status: ${response.status}`);
+        }
+        const json = await response.json();
+        setPagedata(json.data);
         setLoading(false);
+      } catch (error) {
+        console.error(error.message);
       }
     }
     getData();
+    return () => {
+      // Cleanup logic here
+    };
   }, []);
 
-  // initialize both tables once content arrives
-  useEffect(() => {
-    if (loading) return;
-
-    const initTable = (ref) => {
-      const $tbl = $(ref.current);
-      if (!$.fn.DataTable.isDataTable($tbl)) {
-        $tbl.DataTable({
-          responsive: true,
-          pageLength: 10,
-          lengthMenu: [10, 25, 50, 100],
-        });
-      }
-    };
-
-    if (upcomingRef.current) initTable(upcomingRef);
-    if (previousRef.current) initTable(previousRef);
-  }, [loading, contentHtml]);
-
   return (
-    <div className="mvpBgContainer mvp_container" style={{ width: "100%" }}>
-      {loading && <Loader loading={loading} />}
-
+    <div
+      className="mvpBgContainer mvp_container"
+      id="newsMainContents"
+      style={{ width: "100%" }}
+    >
       <div className="news_articles_content" style={{ width: "100%" }}>
         <div className="left_content_area" style={{ margin: 0 }}>
           <h1 className="titles_article border_titles_article1">
@@ -71,11 +63,11 @@ export default function FightSchedules() {
           </h1>
           <div
             className="workout_content update-workout_content headline-articles"
-            style={{ minHeight: 667 }}
+            style={{ minHeight: 844 }}
           >
             <div style={{ margin: "25px 0 25px 0" }}>
               <img
-                src="/assets/img/2d1377d7030b3821b2f7d2d8a70118dd.png"
+                src="/assets/menusImg/2d1377d7030b3821b2f7d2d8a70118dd.jpg"
                 style={{ width: "100%", height: "auto" }}
               />
             </div>
@@ -1230,9 +1222,9 @@ export default function FightSchedules() {
                   className="social-icons a2a_kit a2a_kit_size_32 a2a_default_style"
                   style={{ lineHeight: 0 }}
                 >
-                  <a
+                  <Link
                     className="a2a_button_facebook"
-                    href="/#facebook"
+                    href="https://www.facebook.com/officialmvpboxing/?ref=ts#"
                     title="Facebook"
                     target="_blank"
                     rel="nofollow noopener"
@@ -1254,10 +1246,11 @@ export default function FightSchedules() {
                       </svg>
                     </span>
                     <span className="a2a_label">Facebook</span>
-                  </a>
-                  <a
+                  </Link>
+
+                  <Link
                     className="a2a_button_twitter"
-                    href="/#twitter"
+                    href="https://x.com/mvpboxing"
                     title="Twitter"
                     target="_blank"
                     rel="nofollow noopener"
@@ -1279,10 +1272,11 @@ export default function FightSchedules() {
                       </svg>
                     </span>
                     <span className="a2a_label">Twitter</span>
-                  </a>
-                  <a
+                  </Link>
+
+                  <Link
                     className="a2a_button_whatsapp"
-                    href="/#whatsapp"
+                    href="https://api.whatsapp.com/send?text=Womens%20Sports%20Injuries%20%7C%20MVP%20Boxing%20https%3A%2F%2Fwww.mvpboxing.com%2Farticle%2Fwomens-sports-injuries"
                     title="WhatsApp"
                     target="_blank"
                     rel="nofollow noopener"
@@ -1306,10 +1300,11 @@ export default function FightSchedules() {
                       </svg>
                     </span>
                     <span className="a2a_label">WhatsApp</span>
-                  </a>
-                  <a
+                  </Link>
+
+                  <Link
                     className="a2a_button_facebook_messenger"
-                    href="/#facebook_messenger"
+                    href="https://www.facebook.com/dialog/send?app_id=5303202981&display=popup&link=https%3A%2F%2Fwww.mvpboxing.com%2Farticle%2Fwomens-sports-injuries&redirect_uri=https%3A%2F%2Fstatic.addtoany.com%2Fmenu%2Fthanks.html%23url%3Dhttps%3A%2F%2Fwww.mvpboxing.com%2Farticle%2Fwomens-sports-injuries"
                     title="Facebook Messenger"
                     target="_blank"
                     rel="nofollow noopener"
@@ -1331,10 +1326,11 @@ export default function FightSchedules() {
                       </svg>
                     </span>
                     <span className="a2a_label">Messenger</span>
-                  </a>
-                  <a
+                  </Link>
+
+                  <Link
                     className="a2a_button_reddit"
-                    href="/#reddit"
+                    href="https://www.reddit.com/login/?dest=https%3A%2F%2Fwww.reddit.com%2Fsubmit%3Furl%3Dhttps%253A%252F%252Fwww.mvpboxing.com%252Farticle%252Fwomens-sports-injuries%26title%3DWomens%2BSports%2BInjuries%2B%257C%2BMVP%2BBoxing"
                     title="Reddit"
                     target="_blank"
                     rel="nofollow noopener"
@@ -1356,8 +1352,8 @@ export default function FightSchedules() {
                       </svg>
                     </span>
                     <span className="a2a_label">Reddit</span>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className="a2a_button_pinterest"
                     href="/#pinterest"
                     title="Pinterest"
@@ -1381,8 +1377,8 @@ export default function FightSchedules() {
                       </svg>
                     </span>
                     <span className="a2a_label">Pinterest</span>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className="a2a_button_email"
                     href="/#email"
                     title="Email"
@@ -1406,15 +1402,13 @@ export default function FightSchedules() {
                       </svg>
                     </span>
                     <span className="a2a_label">Email</span>
-                  </a>
+                  </Link>
                 </span>
               </p>
               <div style={{ clear: "both" }} />
               <p />
             </div>
           </div>
-          {/* <div class="mvp-comment-box"></div> */}
-          {/* ends (.mvp-comment-box) */}
           <div
             id="comment-policy"
             className="comment-policy publisher-anchor-color  "
@@ -1448,9 +1442,122 @@ export default function FightSchedules() {
                 <i className="fa fa-share-alt" aria-hidden="true" /> Share
               </div>
             </div>
+            <div className="comment-block">
+              <div
+                className="mvp-comment-box comments-container jquery-comments mobile responsive rendered"
+                id="comments-container"
+                style={{
+                  border: "1px solid #cccccc",
+                  backgroundColor: "#ffffff",
+                  minHeight: 120,
+                  margin: 15,
+                  borderRadius: "3px 3px 3px 3px",
+                  fontWeight: "bold",
+                  fontStyle: "italic",
+                  paddingTop: 29,
+                }}
+              >
+                <div className="commenting-field main">
+                  <i
+                    className="fa fa-user profile-picture round"
+                    aria-hidden="true"
+                  />
+                  <div className="textarea-wrapper">
+                    <span
+                      className="close inline-button"
+                      style={{ display: "none" }}
+                    >
+                      <span className="left" />
+                      <span className="right" />
+                    </span>
+                    <div
+                      className="textarea"
+                      data-placeholder="Join the Discussion..."
+                      contentEditable="true"
+                      style={{ height: "5.1em" }}
+                    />
+                    <div className="control-row" style={{ display: "none" }}>
+                      <span className="send save highlight-background">
+                        Comment
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <ul className="navigation nav-right">
+                  <div className="navigation-wrapper">
+                    <li data-sort-key="newest" data-container-name="comments">
+                      New
+                    </li>
+                    <li data-sort-key="oldest" data-container-name="comments">
+                      Oldest
+                    </li>
+                    <li
+                      data-sort-key="popularity"
+                      data-container-name="comments"
+                      className="active"
+                    >
+                      Best
+                    </li>
+                    <li
+                      data-sort-key="discussed"
+                      data-container-name="comments"
+                    >
+                      Most Discussed
+                    </li>
+                    <li
+                      data-sort-key="recommend"
+                      data-container-name="comments"
+                    >
+                      Recommended
+                    </li>
+                  </div>
+                  <div className="navigation-wrapper responsive">
+                    <p>Sort by </p>
+                    <li className="title active">
+                      <header>Best</header>
+                    </li>
+                    <ul className="dropdown">
+                      <li data-sort-key="newest" data-container-name="comments">
+                        New
+                      </li>
+                      <li data-sort-key="oldest" data-container-name="comments">
+                        Oldest
+                      </li>
+                      <li
+                        data-sort-key="popularity"
+                        data-container-name="comments"
+                        className="active"
+                      >
+                        Best
+                      </li>
+                      <li
+                        data-sort-key="discussed"
+                        data-container-name="comments"
+                      >
+                        Most Discussed
+                      </li>
+                      <li
+                        data-sort-key="recommend"
+                        data-container-name="comments"
+                      >
+                        Recommended
+                      </li>
+                    </ul>
+                    <p />
+                  </div>
+                </ul>
+                <div className="data-container" data-container="comments">
+                  <ul id="comment-list" className="main" />
+                </div>
+              </div>
+              {/* ends (.content-separator2) */}
+            </div>
           </div>
         </div>
+        {/* ends (.left_content_area) */}
       </div>
     </div>
   );
-}
+};
+
+export default WorkoutBoxing;

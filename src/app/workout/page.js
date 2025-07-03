@@ -1,5 +1,5 @@
 // pages/workout.js
-"use client"; 
+"use client";
 
 import Head from "next/head";
 import { useState } from "react";
@@ -108,7 +108,7 @@ export default function Workout() {
                         (recovery) in between each round.
                       </p>
                       <p>
-                        There are various ways victory is achieved in a boxing
+                        {`There are various ways victory is achieved in a boxing
                         match: When an opponent is knocked down and unable to
                         rise to his feet before the referee counts to ten
                         seconds or is unconscious (a Knockout or KO) or if the
@@ -124,7 +124,7 @@ export default function Workout() {
                         regulations and medical requirements. Generally bouts
                         take place in a "ring" that is 18 to 24 square feet in
                         length and is enclosed on each side by four strands of
-                        rope.
+                        rope.`}
                       </p>
                       <p>
                         The ancient Greeks provide us our first historical
@@ -164,16 +164,17 @@ export default function Workout() {
                         neck or head (rabbit-punch) or the kidneys and are
                         prevented from holding the ropes for support when
                         punching, and holding an opponent while punching. A
-                        "clinch" -- a defensive tactic in which a boxer wraps
-                        his/her opponents arms with the sole intention being to
-                        prevent from being hit - once the referee separates the
-                        fighters, each fighter must take a full step back before
-                        fighting is resumed ( referee has the power to direct
-                        the fighters to "punch out" of the clinch). When a boxer
-                        is knocked down by a punch, his/her opponent must
-                        immediately cease fighting and go to the nearest neutral
-                        corner of the ring until the referee has either ruled a
-                        knockout or requested for the fight to continue.
+                        &quot;clinch&quot; -- a defensive tactic in which a
+                        boxer wraps his/her opponents arms with the sole
+                        intention being to prevent from being hit - once the
+                        referee separates the fighters, each fighter must take a
+                        full step back before fighting is resumed ( referee has
+                        the power to direct the fighters to &quot;punch
+                        out&quot; of the clinch). When a boxer is knocked down
+                        by a punch, his/her opponent must immediately cease
+                        fighting and go to the nearest neutral corner of the
+                        ring until the referee has either ruled a knockout or
+                        requested for the fight to continue.
                       </p>
                     </div>
                   </div>
@@ -465,22 +466,22 @@ export default function Workout() {
                       <p>
                         During the recovery period of training, the ATP-CP must
                         be built-up and replenished and the accumulated lactic
-                        acid must be removed. If these needs aren't met, the
-                        systems will be un-available for further activity. While
-                        resting after an anaerobic work bout, oxygen consumption
-                        is increased because of the increased depth and rate of
-                        breathing. This extra oxygen turns the lactic acid back
-                        to pyruvic acid and within 20 seconds, 50% of the ATP
-                        and CP is restored, in 40 seconds, 75% is restored and
-                        in 60 seconds, 87% is restored. Almost all of the ATP
-                        and CP are replenished within three minutes. The removal
-                        rate of lactic acid is slower then the rebuilding rate
-                        of ATP and CP. In 25 minutes, 50% of the lactic acid
-                        will be removed, in 50 minutes, 75% and 87% in 75
-                        minutes. The removal rate of lactic acid can be sped up
-                        through light activity performed during the recovery
-                        period. This is because some of the lactic acid is
-                        metabolized aerobically during the light activity.
+                        acid must be removed. If these needs aren&apos;t met,
+                        the systems will be un-available for further activity.
+                        While resting after an anaerobic work bout, oxygen
+                        consumption is increased because of the increased depth
+                        and rate of breathing. This extra oxygen turns the
+                        lactic acid back to pyruvic acid and within 20 seconds,
+                        50% of the ATP and CP is restored, in 40 seconds, 75% is
+                        restored and in 60 seconds, 87% is restored. Almost all
+                        of the ATP and CP are replenished within three minutes.
+                        The removal rate of lactic acid is slower then the
+                        rebuilding rate of ATP and CP. In 25 minutes, 50% of the
+                        lactic acid will be removed, in 50 minutes, 75% and 87%
+                        in 75 minutes. The removal rate of lactic acid can be
+                        sped up through light activity performed during the
+                        recovery period. This is because some of the lactic acid
+                        is metabolized aerobically during the light activity.
                       </p>
                     </div>
                   </div>
@@ -1432,7 +1433,7 @@ export default function Workout() {
                   MVPBOXING.COM Comment Policy
                   <i aria-hidden="true" className="fa fa-5x fa-comments-o " />
                 </h2>
-                <p>"Hey, why isn't my comment displaying?!"</p>
+                <p>&quot;Hey, why isn&apos;t my comment displaying?!&quot;</p>
                 <p>
                   Please read our{" "}
                   <a
