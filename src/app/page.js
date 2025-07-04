@@ -1312,7 +1312,7 @@ export default function Home() {
             </a>
             <a
               target="_blank"
-              href="https://www.tiktok.com/@mvpboxing"
+              href="https://www.tiktok.com/@manny_masson"
               title="TikTok"
             >
               <i
