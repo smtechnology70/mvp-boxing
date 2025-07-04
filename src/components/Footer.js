@@ -274,7 +274,7 @@ export default function Footer() {
                 </a>
                 <a
                   target="_blank"
-                  href="https://https://tiktok.com/@manny_masson"
+                  href="https://www.tiktok.com/@mvpboxing"
                   title="TikTok"
                   rel="noopener noreferrer"
                 >
@@ -519,7 +519,7 @@ export default function Footer() {
           </a>
           <a
             target="_blank"
-            href="https://https://tiktok.com/@manny_masson"
+            href="https://www.tiktok.com/@mvpboxing"
             title="TikTok"
             rel="noopener noreferrer"
           >
