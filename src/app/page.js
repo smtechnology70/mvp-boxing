@@ -1323,7 +1323,7 @@ export default function Home() {
             </a>
             <a
               target="_blank"
-              href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav"
+              href="https://www.linkedin.com/in/mvp-boxing-a03091254"
               title="linkedin"
             >
               <i className="fab fa-linkedin-in" aria-hidden="true" />
