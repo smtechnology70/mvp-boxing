@@ -286,7 +286,7 @@ export default function Footer() {
                 </a>
                 <a
                   target="_blank"
-                  href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav"
+                  href="https://www.linkedin.com/in/mvp-boxing-a03091254"
                   title="linkedin"
                   rel="noopener noreferrer"
                 >
@@ -527,7 +527,7 @@ export default function Footer() {
           </a>
           <a
             target="_blank"
-            href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav"
+            href="https://www.linkedin.com/in/mvp-boxing-a03091254"
             title="TikTok"
             rel="noopener noreferrer"
           >
