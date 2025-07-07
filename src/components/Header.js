@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, Fragment } from "react";
 import HoverPrefetchLink from "@/components/HoverPrefetchLink";
 import { useRouter } from "next/navigation";
 // import Image from 'next/image'; // Uncomment if you want to use next/image for local images
@@ -278,7 +278,7 @@ export default function Header() {
                         ? item.custom_url
                         : item.menu_alias;
                     return (
-                      <>
+                      <Fragment key={k}>
                         {item.submenu.length < 1 ? (
                           <div key={k} className="menu-list">
                             <HoverPrefetchLink
@@ -341,7 +341,7 @@ export default function Header() {
                             </ul>
                           </div>
                         )}
-                      </>
+                      </Fragment>
                     );
                   })}
               </div>
@@ -553,7 +553,7 @@ export default function Header() {
           >
             {menudata.map((item, i) => {
               return (
-                <>
+                <Fragment key={i}>
                   {item.submenu.length < 1 ? (
                     <li key={i} className="menuHover">
                       <HoverPrefetchLink
@@ -606,7 +606,7 @@ export default function Header() {
                             <div className="left menu_partiton_border" />
                             {item.submenu.map((submenuItem, j) => {
                               return (
-                                <>
+                                <Fragment key={j}>
                                   <div key={j} className="left">
                                     <div className="left main_menu_label">
                                       {submenuItem.title}
@@ -640,7 +640,7 @@ export default function Header() {
                                       </div>
                                     </div>
                                   </div>
-                                </>
+                                </Fragment>
                               );
                             })}
                           </li>
@@ -650,7 +650,7 @@ export default function Header() {
                       )}
                     </li>
                   )}
-                </>
+                </Fragment>
               );
             })}
           </ul>
