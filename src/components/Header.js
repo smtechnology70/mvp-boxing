@@ -15,7 +15,7 @@ import GLOBALS from "@/server/Globals";
 export default function Header() {
   const [loading, setLoading] = useState(false);
   const [menudata, setMenudata] = useState([]);
-  const [showsubmenu, setShowsubmenu] = useState(true);
+  const [showsubmenu, setShowsubmenu] = useState({ main: true });
   const [activeVal, setActiveVal] = useState("menu");
   const [mobilemenudata, setMobilemenudata] = useState([]);
   const [sideNavOpen, setSideNavOpen] = useState(false);
@@ -26,12 +26,8 @@ export default function Header() {
   const router = useRouter();
   const sideNavRef = useRef(null);
 
-  const mouseOutEvent = () => {
-    setShowsubmenu(false);
-  };
-
-  const setMouseOverEvent = () => {
-    setShowsubmenu(true);
+  const showSubMenu = (menuId, flag) => {
+    setShowsubmenu((prev) => ({ ...prev, [menuId]: flag }));
   };
 
   const menuToggle = () => {
@@ -40,16 +36,16 @@ export default function Header() {
 
   const closeHamburgerMenu = () => {
     setSideNavOpen(false);
-    if (typeof window !== "undefined") {
-      document.body.style.overflow = "auto";
-    }
+    // if (typeof window !== "undefined") {
+    //   document.body.style.overflow = "auto";
+    // }
   };
 
   const openHamburgerMenu = () => {
     setSideNavOpen(true);
-    if (typeof window !== "undefined") {
-      document.body.style.overflow = "hidden";
-    }
+    // if (typeof window !== "undefined") {
+    //   document.body.style.overflow = "hidden";
+    // }
   };
 
   useEffect(() => {
@@ -133,6 +129,7 @@ export default function Header() {
             id="menuToggle"
             className="low-menu"
             onClick={openHamburgerMenu}
+            style={{ display: "none" }}
           >
             <svg className="menu-bars" viewBox="0 0 24 24">
               <path
@@ -223,7 +220,7 @@ export default function Header() {
 
         {/* SideNav for mobile */}
         {sideNavOpen && (
-          <div id="mySidenav" className="sidenav" ref={sideNavRef}>
+          <div id="mySidenav" className="sidenav" style={{ display: "block" }}>
             <div className="login-section">
               <button
                 type="button"
@@ -262,67 +259,91 @@ export default function Header() {
                 className="white-font menu-txt fhv fwb fnt20"
               >
                 MVPBOXING.com
-                <span className="f-right">
-                  <i className="fa fa-minus sitesym" aria-hidden="true" />
+                <span
+                  className="f-right"
+                  onClick={() => showSubMenu("main", !showsubmenu["main"])}
+                >
+                  {showsubmenu["main"] ? (
+                    <i className="fa fa-minus sitesym" aria-hidden="true" />
+                  ) : (
+                    <i className="fa fa-plus sym" aria-hidden="true" />
+                  )}
                 </span>
               </div>
               <div id="boxing-menu-list" className="menu-list">
-                {mobilemenudata.map((item, k) => {
-                  let menuUrl =
-                    item.link_to == "custom"
-                      ? item.custom_url
-                      : item.menu_alias;
-                  return (
-                    <>
-                      {item.submenu.length < 1 ? (
-                        <div key={k} className="menu-list">
-                          <HoverPrefetchLink
-                            className="main-menu first text-truncate menu-item"
-                            title={item.name}
-                            href={menuUrl}
-                            onClick={closeHamburgerMenu}
-                          >
-                            <div className="menu-txt fnt15">{item.name}</div>
-                          </HoverPrefetchLink>
-                        </div>
-                      ) : (
-                        <div className="menu-list">
-                          <div className="menu-txt fnt16">
-                            {item.name}
-                            <span className="f-right">
-                              <i
-                                className="fa fa-plus sym"
-                                aria-hidden="true"
-                              />
-                            </span>
+                {showsubmenu["main"] &&
+                  mobilemenudata.map((item, k) => {
+                    let menuUrl =
+                      item.link_to == "custom"
+                        ? item.custom_url
+                        : item.menu_alias;
+                    return (
+                      <>
+                        {item.submenu.length < 1 ? (
+                          <div key={k} className="menu-list">
+                            <HoverPrefetchLink
+                              className="main-menu first text-truncate menu-item"
+                              title={item.name}
+                              href={menuUrl}
+                              onClick={closeHamburgerMenu}
+                            >
+                              <div className="menu-txt fnt15">{item.name}</div>
+                            </HoverPrefetchLink>
                           </div>
-                          <ul className="submenu" style={{ display: "none" }}>
-                            {item.submenu.map((submenuItem, s) => {
-                              let submenuUrl =
-                                submenuItem.link_type == "custom"
-                                  ? submenuItem.custom_url
-                                  : submenuItem.menu_alias;
-                              return (
-                                <li key={s} className>
-                                  <HoverPrefetchLink
-                                    className="menu-item"
-                                    title={submenuItem.title}
-                                    href={submenuUrl}
-                                    onClick={closeHamburgerMenu}
-                                  >
-                                    <div className="fnt14 inner-menu inner-menu-link text-truncate">
-                                      {submenuItem.title}
-                                    </div>
-                                  </HoverPrefetchLink>
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        </div>
-                      )}
-                    </>
-                  );
-                })}
+                        ) : (
+                          <div className="menu-list">
+                            <div className="menu-txt fnt16">
+                              {item.name}
+                              <span
+                                className="f-right"
+                                onClick={() =>
+                                  showSubMenu(
+                                    item.name,
+                                    !showsubmenu[item.name]
+                                  )
+                                }
+                              >
+                                {showsubmenu[item.name] ? (
+                                  <i
+                                    className="fa fa-minus sitesym"
+                                    aria-hidden="true"
+                                  />
+                                ) : (
+                                  <i
+                                    className="fa fa-plus sym"
+                                    aria-hidden="true"
+                                  />
+                                )}
+                              </span>
+                            </div>
+                            <ul className="submenu">
+                              {showsubmenu[item.name] &&
+                                item.submenu.map((submenuItem, s) => {
+                                  let submenuUrl =
+                                    submenuItem.link_type == "custom"
+                                      ? submenuItem.custom_url
+                                      : submenuItem.menu_alias;
+                                  return (
+                                    <li key={s} className>
+                                      <HoverPrefetchLink
+                                        className="menu-item"
+                                        title={submenuItem.title}
+                                        href={submenuUrl}
+                                        onClick={closeHamburgerMenu}
+                                      >
+                                        <div className="fnt14 inner-menu inner-menu-link text-truncate">
+                                          {submenuItem.title}
+                                        </div>
+                                      </HoverPrefetchLink>
+                                    </li>
+                                  );
+                                })}
+                            </ul>
+                          </div>
+                        )}
+                      </>
+                    );
+                  })}
               </div>
               <hr className="MuiDivider-root-879" />
               {/* <div id="nav-img" class="ml-3"> */}
@@ -547,7 +568,7 @@ export default function Header() {
                     <li
                       key={i}
                       className="menuHover"
-                      onMouseOver={setMouseOverEvent}
+                      // onMouseOver={setMouseOverEvent}
                     >
                       <HoverPrefetchLink id="news_2" href="#">
                         {item.name}
@@ -570,7 +591,7 @@ export default function Header() {
                                     <HoverPrefetchLink
                                       href={menuUrl}
                                       title="BOXING & MMA News"
-                                      onClick={mouseOutEvent}
+                                      // onClick={mouseOutEvent}
                                     >
                                       {sidebarItem.menu_name}
                                     </HoverPrefetchLink>
@@ -603,7 +624,7 @@ export default function Header() {
                                               : ""
                                           }
                                           href={submenuItem.slug}
-                                          onClick={mouseOutEvent}
+                                          // onClick={mouseOutEvent}
                                         >
                                           <img
                                             className=" lazyloaded"
