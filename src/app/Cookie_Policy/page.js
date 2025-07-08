@@ -76,10 +76,10 @@ export default function CookiePolicyPage() {
                 What are cookies?
               </h3>
               <p>
-                Cookies are small text files stored on your computer by your web
+                {`Cookies are small text files stored on your computer by your web
                 browser at the request of a site you're viewing. This allows the
                 site you're viewing to remember things about you, such as your
-                preferences and history or to keep you logged in.
+                preferences and history or to keep you logged in.`}
               </p>
               <p>
                 Cookies may be stored on your computer for a short time (such as
@@ -176,9 +176,9 @@ export default function CookiePolicyPage() {
                 Removing/disabling cookies
               </h3>
               <p>
-                Managing your cookies and cookie preferences must be done from
+                {`Managing your cookies and cookie preferences must be done from
                 within your browser's options/preferences. Here is a list of
-                guides on how to do this for popular browser software:
+                guides on how to do this for popular browser software:`}
               </p>
               <div style={{ marginLeft: "20px" }}>
                 <ul style={{ paddingLeft: "20px", marginBottom: "20px" }}>
