@@ -79,6 +79,7 @@ const BoxingTrainingContent = (props) => {
                                   className="lazyload "
                                   alt={item.title}
                                   data-src={item.image}
+                                  src={item.image}
                                 />
                               </div>
                             </Link>
