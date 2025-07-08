@@ -101,21 +101,21 @@ export default function Footer() {
                   </div>
                   {showLangDropdown && (
                     <div
-                      // className="b-footer"
+                      className="b-footer"
                       style={{
-                        position: "absolute",
-                        background: "#fff",
-                        zIndex: 10,
+                        display: "block",
+                        // background: "#fff",
+                        // zIndex: 10,
                       }}
                     >
                       <ul
                         id="footer_country_selector"
-                        style={{ listStyle: "none", margin: 0, padding: 0 }}
+                        // style={{ listStyle: "none", margin: 0, padding: 0 }}
                       >
                         {LANGUAGES.map((lang) => (
                           <li
                             key={lang.value}
-                            style={{ cursor: "pointer", padding: 4 }}
+                            style={{ cursor: "pointer" }}
                             onClick={() => handleLangSelect(lang)}
                           >
                             <span>{lang.text}</span>
@@ -123,7 +123,7 @@ export default function Footer() {
                               <img
                                 src={lang.img}
                                 alt={lang.text}
-                                style={{ marginLeft: 8, width: 24, height: 16 }}
+                                // style={{ marginLeft: 8, width: 24, height: 16 }}
                               />
                             )}
                           </li>
@@ -350,21 +350,21 @@ export default function Footer() {
                   </div>
                   {showLangDropdownMobile && (
                     <div
-                      // className="b-footer_1"
+                      className="b-footer_1"
                       style={{
-                        position: "absolute",
-                        background: "#fff",
-                        zIndex: 10,
+                        display: "block",
+                        // background: "#fff",
+                        // zIndex: 10,
                       }}
                     >
                       <ul
                         id="footer_country_selector_1"
-                        style={{ listStyle: "none", margin: 0, padding: 0 }}
+                        // style={{ listStyle: "none", margin: 0, padding: 0 }}
                       >
                         {LANGUAGES.map((lang) => (
                           <li
                             key={lang.value}
-                            style={{ cursor: "pointer", padding: 4 }}
+                            style={{ cursor: "pointer" }}
                             onClick={() => handleLangSelectMobile(lang)}
                           >
                             <span>{lang.text}</span>
@@ -372,7 +372,7 @@ export default function Footer() {
                               <img
                                 src={lang.img}
                                 alt={lang.text}
-                                style={{ marginLeft: 8, width: 24, height: 16 }}
+                                // style={{ marginLeft: 8, width: 24, height: 16 }}
                               />
                             )}
                           </li>

@@ -4,6 +4,7 @@ import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams, useParams } from "next/navigation";
 import $ from "jquery";
+import GLOBALS from "@/server/Globals";
 
 const AllTrainingContent = (props) => {
   const { id } = useParams();

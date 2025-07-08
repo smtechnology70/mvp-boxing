@@ -8,6 +8,7 @@ import BoxingTrainingMma from "@/components/LandingPage/Boxing_training_mma";
 import SidebarBottom from "@/components/LandingPage/SidebarBottom";
 import SidebarBottomMma from "@/components/LandingPage/SidebarBottomMma";
 import Sliders from "@/components/LandingPage/Sliders";
+import ReusableImage from "@/components/ReusableImage";
 
 export default function Home() {
   return (
@@ -22,12 +23,10 @@ export default function Home() {
           </section>
           <section className="bgwhite" id="mma-news">
             <MmaNews />
-            {/* <footer class="bg-button">        <div class="row nomargin">          <div class="col-12 nopadding">            <div class="text-right">              <a href="https://www.mvpboxing.com/news-mma" class="btn btn-grey vm">View More</a>            </div>          </div>        </div>      </footer> */}
           </section>
 
           <Podcast />
 
-          {/* <section class="bgwhite" id="training-videos">    <header>      <div class="header-text"><a href="javascript:void(0);">BOXING & MMA TRAINING</a>        <a class=" btn btn-book p-0 px-1" href="https://mvp-boxing.square.site/">Book</a>      </div>    </header>    <div class="row nomargin bg-grey0">                  <div class="col-sm-12 mt15 flex-col nopadding">              <i id="menuIcon" class="ml10 fa fa-chevron-right chevron-icon"></i>              <div class="clear-left mr15">                <p class="box-image"><a href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-1"><img class="img-fluid lazyload" data-src="https://www.mvpboxing.com/assets/menusImg/z257g7b6cbe790ce987998875d5ee8b257.jpg" height="100" width="100"></a></p>                <a class="list-item caption text-justify" href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-1">WALKING DOWN OPPONENT</a>              </div>            </div>                  <div class="col-sm-12 mt15 flex-col nopadding">              <i id="menuIcon" class="ml10 fa fa-chevron-right chevron-icon"></i>              <div class="clear-left mr15">                <p class="box-image"><a href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-2"><img class="img-fluid lazyload" data-src="https://www.mvpboxing.com/assets/menusImg/z258g7b6cbe790ce987998875d5ee8b258.jpg" height="100" width="100"></a></p>                <a class="list-item caption text-justify" href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-2">BOXING FOR MMA</a>              </div>            </div>                  <div class="col-sm-12 mt15 flex-col nopadding">              <i id="menuIcon" class="ml10 fa fa-chevron-right chevron-icon"></i>              <div class="clear-left mr15">                <p class="box-image"><a href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-4"><img class="img-fluid lazyload" data-src="https://www.mvpboxing.com/assets/menusImg/z260g7b6cbe790ce987998875d5ee8b260.jpg" height="100" width="100"></a></p>                <a class="list-item caption text-justify" href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-4">COUNTER PUNCHING</a>              </div>            </div>                  <div class="col-sm-12 mt15 flex-col nopadding">              <i id="menuIcon" class="ml10 fa fa-chevron-right chevron-icon"></i>              <div class="clear-left mr15">                <p class="box-image"><a href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-5"><img class="img-fluid lazyload" data-src="https://www.mvpboxing.com/assets/menusImg/z261g7b6cbe790ce987998875d5ee8b261.jpg" height="100" width="100"></a></p>                <a class="list-item caption text-justify" href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-5">STIFF ARM</a>              </div>            </div>                  <div class="col-sm-12 mt15 flex-col nopadding">              <i id="menuIcon" class="ml10 fa fa-chevron-right chevron-icon"></i>              <div class="clear-left mr15">                <p class="box-image"><a href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-16"><img class="img-fluid lazyload" data-src="https://www.mvpboxing.com/assets/menusImg/z272g7b6cbe790ce987998875d5ee8b272.jpg" height="100" width="100"></a></p>                <a class="list-item caption text-justify" href="https://www.mvpboxing.com/videos/boxing-training/Manny-Massons-Boxing-Training-for-MMA-16">DYNAMIC SPRINT DRILL</a>              </div>            </div>          </div>    <!-- <footer class="bg-button">      <div class="row nomargin">        <div class="col-12 nopadding">          <div class="text-right">            <a href="https://www.mvpboxing.com/videos" class="btn btn-grey videos-btn vm">View More</a>          </div>        </div>      </div>    </footer>   </section>*/}
           <div className="d-md-none d-block" id="mobile-device">
             <div className="container-fluid nopadding" style={{ padding: 1 }}>
               <section className="bgwhite" id="boxing-news">
@@ -36,7 +35,6 @@ export default function Home() {
                     <BoxingTraining />
                     <BoxingTrainingMma />
                   </div>
-                  {/* <footer class="bg-button">            <div class="row nomargin">              <div class="col-12 nopadding">                <div class="text-right">                  <a href="https://www.mvpboxing.com/news-boxing" class="btn btn-grey vm">View More</a>                </div>              </div>            </div>          </footer> */}
                 </div>
               </section>
             </div>
@@ -52,14 +50,14 @@ export default function Home() {
                     <div className="DYBOXING_TRAINING_contend1">
                       <div className="videos1">
                         {" "}
-                        <img
-                          src="https://www.mvpboxing.com//uploads/training/1741207552img2.jpg"
+                        <ReusableImage
+                          src="/uploads/training/1741207552img2.jpg"
                           className="videos1img"
                         />{" "}
                         <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//assets/img/play.png"
+                          <ReusableImage
+                            src="/assets/img/play.png"
                             className="play_icon"
                           />{" "}
                         </a>
@@ -73,14 +71,14 @@ export default function Home() {
                       </div>
                       <div className="videos1">
                         {" "}
-                        <img
-                          src="https://www.mvpboxing.com//uploads/training/1741425755img1.jpg"
+                        <ReusableImage
+                          src="/uploads/training/1741425755img1.jpg"
                           className="videos1img"
                         />{" "}
                         <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//assets/img/play.png"
+                          <ReusableImage
+                            src="/assets/img/play.png"
                             className="play_icon"
                           />{" "}
                         </a>
@@ -94,14 +92,14 @@ export default function Home() {
                       </div>
                       <div className="videos1">
                         {" "}
-                        <img
-                          src="https://www.mvpboxing.com//uploads/training/1741207782img3.jpg"
+                        <ReusableImage
+                          src="/uploads/training/1741207782img3.jpg"
                           className="videos1img"
                         />{" "}
                         <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//assets/img/play.png"
+                          <ReusableImage
+                            src="/assets/img/play.png"
                             className="play_icon"
                           />{" "}
                         </a>
@@ -117,14 +115,14 @@ export default function Home() {
                       </div>
                       <div className="videos1">
                         {" "}
-                        <img
-                          src="https://www.mvpboxing.com//uploads/training/1741208086img7.jpg"
+                        <ReusableImage
+                          src="/uploads/training/1741208086img7.jpg"
                           className="videos1img"
                         />{" "}
                         <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//assets/img/play.png"
+                          <ReusableImage
+                            src="/assets/img/play.png"
                             className="play_icon"
                           />{" "}
                         </a>
@@ -140,14 +138,14 @@ export default function Home() {
                       </div>
                       <div className="videos1">
                         {" "}
-                        <img
-                          src="https://www.mvpboxing.com//uploads/training/1741532567img4.jpg"
+                        <ReusableImage
+                          src="/uploads/training/1741532567img4.jpg"
                           className="videos1img"
                         />{" "}
                         <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//assets/img/play.png"
+                          <ReusableImage
+                            src="/assets/img/play.png"
                             className="play_icon"
                           />{" "}
                         </a>
@@ -161,14 +159,14 @@ export default function Home() {
                       </div>
                       <div className="videos1">
                         {" "}
-                        <img
-                          src="https://www.mvpboxing.com//uploads/training/1741208320img8.jpg"
+                        <ReusableImage
+                          src="/uploads/training/1741208320img8.jpg"
                           className="videos1img"
                         />{" "}
                         <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//assets/img/play.png"
+                          <ReusableImage
+                            src="/assets/img/play.png"
                             className="play_icon"
                           />{" "}
                         </a>
@@ -192,15 +190,15 @@ export default function Home() {
                     <div className="DYBOXING_TRAINING_contend1">
                       <div className="videos1">
                         {" "}
-                        <img
-                          src="https://www.mvpboxing.com//uploads/training/1741208929img6.jpg"
+                        <ReusableImage
+                          src="/uploads/training/1741208929img6.jpg"
                           className="videos1img"
                         />{" "}
                         <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                           {" "}
-                          <img
+                          <ReusableImage
                             data-toggle="modal"
-                            src="https://www.mvpboxing.com//assets/img/play.png"
+                            src="/assets/img/play.png"
                             className="play_icon"
                           />{" "}
                         </a>
@@ -214,15 +212,15 @@ export default function Home() {
                       </div>
                       <div className="videos1">
                         {" "}
-                        <img
-                          src="https://www.mvpboxing.com//uploads/training/1741425792img9.jpg"
+                        <ReusableImage
+                          src="/uploads/training/1741425792img9.jpg"
                           className="videos1img"
                         />{" "}
                         <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                           {" "}
-                          <img
+                          <ReusableImage
                             data-toggle="modal"
-                            src="https://www.mvpboxing.com//assets/img/play.png"
+                            src="/assets/img/play.png"
                             className="play_icon"
                           />{" "}
                         </a>
@@ -236,15 +234,15 @@ export default function Home() {
                       </div>
                       <div className="videos1">
                         {" "}
-                        <img
-                          src="https://www.mvpboxing.com//uploads/training/1741425427img5.jpg"
+                        <ReusableImage
+                          src="/uploads/training/1741425427img5.jpg"
                           className="videos1img"
                         />{" "}
                         <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                           {" "}
-                          <img
+                          <ReusableImage
                             data-toggle="modal"
-                            src="https://www.mvpboxing.com//assets/img/play.png"
+                            src="/assets/img/play.png"
                             className="play_icon"
                           />{" "}
                         </a>
@@ -260,15 +258,15 @@ export default function Home() {
                       </div>
                       <div className="videos1">
                         {" "}
-                        <img
-                          src="https://www.mvpboxing.com//uploads/training/1741425594img6.jpg"
+                        <ReusableImage
+                          src="/uploads/training/1741425594img6.jpg"
                           className="videos1img"
                         />{" "}
                         <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                           {" "}
-                          <img
+                          <ReusableImage
                             data-toggle="modal"
-                            src="https://www.mvpboxing.com//assets/img/play.png"
+                            src="/assets/img/play.png"
                             className="play_icon"
                           />{" "}
                         </a>
@@ -284,15 +282,15 @@ export default function Home() {
                       </div>
                       <div className="videos1">
                         {" "}
-                        <img
-                          src="https://www.mvpboxing.com//uploads/training/1741425514img6.jpg"
+                        <ReusableImage
+                          src="/uploads/training/1741425514img6.jpg"
                           className="videos1img"
                         />{" "}
                         <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                           {" "}
-                          <img
+                          <ReusableImage
                             data-toggle="modal"
-                            src="https://www.mvpboxing.com//assets/img/play.png"
+                            src="/assets/img/play.png"
                             className="play_icon"
                           />{" "}
                         </a>
@@ -308,15 +306,15 @@ export default function Home() {
                       </div>
                       <div className="videos1">
                         {" "}
-                        <img
-                          src="https://www.mvpboxing.com//uploads/training/1741425552img6.jpg"
+                        <ReusableImage
+                          src="/uploads/training/1741425552img6.jpg"
                           className="videos1img"
                         />{" "}
                         <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                           {" "}
-                          <img
+                          <ReusableImage
                             data-toggle="modal"
-                            src="https://www.mvpboxing.com//assets/img/play.png"
+                            src="/assets/img/play.png"
                             className="play_icon"
                           />{" "}
                         </a>
@@ -334,16 +332,14 @@ export default function Home() {
                     <div className="DYBOXING_TRAINING_contend2" />
                   </div>
                 </div>
-                {/* <footer class="bg-button">        <div class="row nomargin">          <div class="col-12 nopadding">            <div class="text-right">              <a href="https://www.mvpboxing.com/news-boxing" class="btn btn-grey vm">View More</a>            </div>          </div>        </div>      </footer> */}
+                {/* <footer class="bg-button">        <div class="row nomargin">          <div class="col-12 nopadding">            <div class="text-right">              <a href="news-boxing" class="btn btn-grey vm">View More</a>            </div>          </div>        </div>      </footer> */}
               </section>
             </div>
           </div>
           <section className="bgwhite" id="fight-polls">
             <header>
               <div className="header-text">
-                <a href="https://www.mvpboxing.com/body-scan-break-down-injuries">
-                  BODY SCAN
-                </a>
+                <a href="body-scan-break-down-injuries">BODY SCAN</a>
               </div>
             </header>
             <div
@@ -365,8 +361,8 @@ export default function Home() {
                       >
                         <div id="male-body-cont">
                           <div className="scan" id="scan">
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/body_scan_male001.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/body_scan_male001.png"
                               alt="Body Scan Breaks Down Injuries"
                               width={112}
                               height={213}
@@ -375,121 +371,121 @@ export default function Home() {
                           </div>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-head-injury"
+                            href="body-injury/male-head-injury"
                             className="bodyscans-item item1"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item1.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item1.png"
                               alt="Head Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-facial-injury"
+                            href="body-injury/male-facial-injury"
                             className="bodyscans-item item2"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item2.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item2.png"
                               alt="Facial Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-shoulder-injury"
+                            href="body-injury/male-shoulder-injury"
                             className="bodyscans-item item3"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item3.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item3.png"
                               alt="Shoulder Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-wrist-injury"
+                            href="body-injury/male-wrist-injury"
                             className="bodyscans-item item4"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item4.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item4.png"
                               alt="Wrist Hand Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-lowback-injury"
+                            href="body-injury/male-lowback-injury"
                             className="bodyscans-item item5"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item6.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item6.png"
                               alt="Low Back Pain Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-elbow-injury"
+                            href="body-injury/male-elbow-injury"
                             className="bodyscans-item item6"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item5.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item5.png"
                               alt="Elbow Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-hip-injury"
+                            href="body-injury/male-hip-injury"
                             className="bodyscans-item item7"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item7.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item7.png"
                               alt="HIP Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-knee-injury"
+                            href="body-injury/male-knee-injury"
                             className="bodyscans-item item8"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item8.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item8.png"
                               alt="Knee Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-lowerleg-injury"
+                            href="body-injury/male-lowerleg-injury"
                             className="bodyscans-item item9"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item9.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item9.png"
                               alt="Lower Leg Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-foot-injury"
+                            href="body-injury/male-foot-injury"
                             className="bodyscans-item item10"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item10.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item10.png"
                               alt="Foot Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-ankle-injury"
+                            href="body-injury/male-ankle-injury"
                             className="bodyscans-item item11"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item11.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item11.png"
                               alt="Ankle Injury"
                               className="img lazyload"
                             />
@@ -527,7 +523,7 @@ export default function Home() {
             </header>
             <div className="row nomargin bg-grey0 p-3 position-relative">
               {/*Code for Map Start */}
-              {/*<form action="https://www.mvpboxing.com//poll/saveOp" method="post">*/}
+              {/*<form action="/poll/saveOp" method="post">*/}
               <form
                 className="voteform"
                 id="voteformmsite"
@@ -638,15 +634,12 @@ export default function Home() {
               </form>
               {/*Code for Map End */}
             </div>
-            {/* <footer class="bg-button">      <div class="row nomargin">        <div class="col-12 nopadding">          <div class="text-right">            <!-- <a href="https://www.mvpboxing.com/videos" class="btn btn-grey videos-btn vm">View More</a> --          </div>        </div>      </div>    </footer> */}
+            {/* <footer class="bg-button">      <div class="row nomargin">        <div class="col-12 nopadding">          <div class="text-right">            <!-- <a href="videos" class="btn btn-grey videos-btn vm">View More</a> --          </div>        </div>      </div>    </footer> */}
           </section>
         </div>
       </div>
       <div className="d-none d-md-block" id="desktop-devie">
-        <link
-          rel="stylesheet"
-          href="https://www.mvpboxing.com/assets/css/style-trainning.css"
-        />
+        <link rel="stylesheet" href="assets/css/style-trainning.css" />
         <div className="container-fluid nopadding" style={{ padding: 1 }}>
           <section className="headlines">
             <Sliders />
@@ -672,14 +665,14 @@ export default function Home() {
                       <div className="DYBOXING_TRAINING_contend1">
                         <div className="videos1">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//uploads/training/1741207552img2.jpg"
+                          <ReusableImage
+                            src="/uploads/training/1741207552img2.jpg"
                             className="videos1img"
                           />{" "}
                           <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                             {" "}
-                            <img
-                              src="https://www.mvpboxing.com//assets/img/play.png"
+                            <ReusableImage
+                              src="/assets/img/play.png"
                               className="play_icon"
                             />{" "}
                           </a>
@@ -693,14 +686,14 @@ export default function Home() {
                         </div>
                         <div className="videos1">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//uploads/training/1741425755img1.jpg"
+                          <ReusableImage
+                            src="/uploads/training/1741425755img1.jpg"
                             className="videos1img"
                           />{" "}
                           <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                             {" "}
-                            <img
-                              src="https://www.mvpboxing.com//assets/img/play.png"
+                            <ReusableImage
+                              src="/assets/img/play.png"
                               className="play_icon"
                             />{" "}
                           </a>
@@ -716,14 +709,14 @@ export default function Home() {
                         </div>
                         <div className="videos1">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//uploads/training/1741207782img3.jpg"
+                          <ReusableImage
+                            src="/uploads/training/1741207782img3.jpg"
                             className="videos1img"
                           />{" "}
                           <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                             {" "}
-                            <img
-                              src="https://www.mvpboxing.com//assets/img/play.png"
+                            <ReusableImage
+                              src="/assets/img/play.png"
                               className="play_icon"
                             />{" "}
                           </a>
@@ -739,14 +732,14 @@ export default function Home() {
                         </div>
                         <div className="videos1">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//uploads/training/1741208086img7.jpg"
+                          <ReusableImage
+                            src="/uploads/training/1741208086img7.jpg"
                             className="videos1img"
                           />{" "}
                           <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                             {" "}
-                            <img
-                              src="https://www.mvpboxing.com//assets/img/play.png"
+                            <ReusableImage
+                              src="/assets/img/play.png"
                               className="play_icon"
                             />{" "}
                           </a>
@@ -762,14 +755,14 @@ export default function Home() {
                         </div>
                         <div className="videos1">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//uploads/training/1741532567img4.jpg"
+                          <ReusableImage
+                            src="/uploads/training/1741532567img4.jpg"
                             className="videos1img"
                           />{" "}
                           <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                             {" "}
-                            <img
-                              src="https://www.mvpboxing.com//assets/img/play.png"
+                            <ReusableImage
+                              src="/assets/img/play.png"
                               className="play_icon"
                             />{" "}
                           </a>
@@ -783,14 +776,14 @@ export default function Home() {
                         </div>
                         <div className="videos1">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//uploads/training/1741208320img8.jpg"
+                          <ReusableImage
+                            src="/uploads/training/1741208320img8.jpg"
                             className="videos1img"
                           />{" "}
                           <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                             {" "}
-                            <img
-                              src="https://www.mvpboxing.com//assets/img/play.png"
+                            <ReusableImage
+                              src="/assets/img/play.png"
                               className="play_icon"
                             />{" "}
                           </a>
@@ -814,14 +807,14 @@ export default function Home() {
                       <div className="DYBOXING_TRAINING_contend1">
                         <div className="videos1">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//uploads/training/1741208929img6.jpg"
+                          <ReusableImage
+                            src="/uploads/training/1741208929img6.jpg"
                             className="videos1img"
                           />{" "}
                           <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                             {" "}
-                            <img
-                              src="https://www.mvpboxing.com//assets/img/play.png"
+                            <ReusableImage
+                              src="/assets/img/play.png"
                               className="play_icon"
                             />{" "}
                           </a>
@@ -835,14 +828,14 @@ export default function Home() {
                         </div>
                         <div className="videos1">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//uploads/training/1741425792img9.jpg"
+                          <ReusableImage
+                            src="/uploads/training/1741425792img9.jpg"
                             className="videos1img"
                           />{" "}
                           <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                             {" "}
-                            <img
-                              src="https://www.mvpboxing.com//assets/img/play.png"
+                            <ReusableImage
+                              src="/assets/img/play.png"
                               className="play_icon"
                             />{" "}
                           </a>
@@ -856,14 +849,14 @@ export default function Home() {
                         </div>
                         <div className="videos1">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//uploads/training/1741425427img5.jpg"
+                          <ReusableImage
+                            src="/uploads/training/1741425427img5.jpg"
                             className="videos1img"
                           />{" "}
                           <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                             {" "}
-                            <img
-                              src="https://www.mvpboxing.com//assets/img/play.png"
+                            <ReusableImage
+                              src="/assets/img/play.png"
                               className="play_icon"
                             />{" "}
                           </a>
@@ -879,14 +872,14 @@ export default function Home() {
                         </div>
                         <div className="videos1">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//uploads/training/1741425594img6.jpg"
+                          <ReusableImage
+                            src="/uploads/training/1741425594img6.jpg"
                             className="videos1img"
                           />{" "}
                           <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                             {" "}
-                            <img
-                              src="https://www.mvpboxing.com//assets/img/play.png"
+                            <ReusableImage
+                              src="/assets/img/play.png"
                               className="play_icon"
                             />{" "}
                           </a>
@@ -902,14 +895,14 @@ export default function Home() {
                         </div>
                         <div className="videos1">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//uploads/training/1741425514img6.jpg"
+                          <ReusableImage
+                            src="/uploads/training/1741425514img6.jpg"
                             className="videos1img"
                           />{" "}
                           <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                             {" "}
-                            <img
-                              src="https://www.mvpboxing.com//assets/img/play.png"
+                            <ReusableImage
+                              src="/assets/img/play.png"
                               className="play_icon"
                             />{" "}
                           </a>
@@ -925,14 +918,14 @@ export default function Home() {
                         </div>
                         <div className="videos1">
                           {" "}
-                          <img
-                            src="https://www.mvpboxing.com//uploads/training/1741425552img6.jpg"
+                          <ReusableImage
+                            src="/uploads/training/1741425552img6.jpg"
                             className="videos1img"
                           />{" "}
                           <a href="Manny-Massons-Boxing-Training-for-MMA-15.html">
                             {" "}
-                            <img
-                              src="https://www.mvpboxing.com//assets/img/play.png"
+                            <ReusableImage
+                              src="/assets/img/play.png"
                               className="play_icon"
                             />{" "}
                           </a>
@@ -963,9 +956,7 @@ export default function Home() {
           <section className="bgwhite" id="fight-polls">
             <header>
               <div className="header-text">
-                <a href="https://www.mvpboxing.com/body-scan-break-down-injuries">
-                  BODY SCAN
-                </a>
+                <a href="body-scan-break-down-injuries">BODY SCAN</a>
               </div>
             </header>
             <div
@@ -987,8 +978,8 @@ export default function Home() {
                       >
                         <div id="male-body-cont">
                           <div className="scan" id="scan">
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/body_scan_male001.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/body_scan_male001.png"
                               alt="Body Scan Breaks Down Injuries"
                               width={112}
                               height={213}
@@ -997,121 +988,121 @@ export default function Home() {
                           </div>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-head-injury"
+                            href="body-injury/male-head-injury"
                             className="bodyscans-item item1"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item1.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item1.png"
                               alt="Head Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-facial-injury"
+                            href="body-injury/male-facial-injury"
                             className="bodyscans-item item2"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item2.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item2.png"
                               alt="Facial Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-shoulder-injury"
+                            href="body-injury/male-shoulder-injury"
                             className="bodyscans-item item3"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item3.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item3.png"
                               alt="Shoulder Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-wrist-injury"
+                            href="body-injury/male-wrist-injury"
                             className="bodyscans-item item4"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item4.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item4.png"
                               alt="Wrist Hand Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-lowback-injury"
+                            href="body-injury/male-lowback-injury"
                             className="bodyscans-item item5"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item6.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item6.png"
                               alt="Low Back Pain Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-elbow-injury"
+                            href="body-injury/male-elbow-injury"
                             className="bodyscans-item item6"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item5.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item5.png"
                               alt="Elbow Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-hip-injury"
+                            href="body-injury/male-hip-injury"
                             className="bodyscans-item item7"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item7.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item7.png"
                               alt="HIP Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-knee-injury"
+                            href="body-injury/male-knee-injury"
                             className="bodyscans-item item8"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item8.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item8.png"
                               alt="Knee Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-lowerleg-injury"
+                            href="body-injury/male-lowerleg-injury"
                             className="bodyscans-item item9"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item9.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item9.png"
                               alt="Lower Leg Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-foot-injury"
+                            href="body-injury/male-foot-injury"
                             className="bodyscans-item item10"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item10.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item10.png"
                               alt="Foot Injury"
                               className="img lazyload"
                             />
                           </a>{" "}
                           <a
                             target="_blank"
-                            href="https://www.mvpboxing.com/body-injury/male-ankle-injury"
+                            href="body-injury/male-ankle-injury"
                             className="bodyscans-item item11"
                           >
-                            <img
-                              data-src="https://www.mvpboxing.com/assets/images/item11.png"
+                            <ReusableImage
+                              dataSrc="/assets/images/item11.png"
                               alt="Ankle Injury"
                               className="img lazyload"
                             />

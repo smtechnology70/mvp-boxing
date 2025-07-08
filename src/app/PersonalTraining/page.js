@@ -91,7 +91,7 @@ const PersonalTraining = (props) => {
                       <strong>Benefits of Hiring a Personal Trainer</strong>
                       <span className="right">
                         <i
-                          className="arrow fa fa-arrow-down"
+                          className="arrow fa fa-arrow-right"
                           aria-hidden="true"
                         />
                       </span>
@@ -376,7 +376,7 @@ const PersonalTraining = (props) => {
                 {/* AddToAny BEGIN */}
                 <span
                   className="social-icons a2a_kit a2a_kit_size_32 a2a_default_style"
-                  style={{ lineHeight: 32 }}
+                  // style={{ lineHeight: 32 }}
                 >
                   <a
                     className="a2a_button_facebook"
@@ -401,7 +401,7 @@ const PersonalTraining = (props) => {
                         />
                       </svg>
                     </span>
-                    <span className="a2a_label">Facebook</span>
+                    {/* <span className="a2a_label">Facebook</span> */}
                   </a>
                   <a
                     className="a2a_button_twitter"
@@ -426,7 +426,7 @@ const PersonalTraining = (props) => {
                         />
                       </svg>
                     </span>
-                    <span className="a2a_label">Twitter</span>
+                    {/* <span className="a2a_label">Twitter</span> */}
                   </a>
                   <a
                     className="a2a_button_whatsapp"
@@ -453,7 +453,7 @@ const PersonalTraining = (props) => {
                         />
                       </svg>
                     </span>
-                    <span className="a2a_label">WhatsApp</span>
+                    {/* <span className="a2a_label">WhatsApp</span> */}
                   </a>
                   <a
                     className="a2a_button_facebook_messenger"
@@ -478,7 +478,7 @@ const PersonalTraining = (props) => {
                         />
                       </svg>
                     </span>
-                    <span className="a2a_label">Messenger</span>
+                    {/* <span className="a2a_label">Messenger</span> */}
                   </a>
                   <a
                     className="a2a_button_reddit"
@@ -503,7 +503,7 @@ const PersonalTraining = (props) => {
                         />
                       </svg>
                     </span>
-                    <span className="a2a_label">Reddit</span>
+                    {/* <span className="a2a_label">Reddit</span> */}
                   </a>
                   <a
                     className="a2a_button_pinterest"
@@ -528,7 +528,7 @@ const PersonalTraining = (props) => {
                         />
                       </svg>
                     </span>
-                    <span className="a2a_label">Pinterest</span>
+                    {/* <span className="a2a_label">Pinterest</span> */}
                   </a>
                   <a
                     className="a2a_button_email"
@@ -553,7 +553,7 @@ const PersonalTraining = (props) => {
                         />
                       </svg>
                     </span>
-                    <span className="a2a_label">Email</span>
+                    {/* <span className="a2a_label">Email</span> */}
                   </a>
                 </span>
               </p>
