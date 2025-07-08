@@ -83,7 +83,7 @@ const ProgramsFaq = (props) => {
                       </strong>
                       <span className="right align-middle">
                         <i
-                          className="arrow fa fa-arrow-down"
+                          className="arrow fa fa-arrow-right"
                           aria-hidden="true"
                         />
                       </span>
@@ -520,7 +520,7 @@ const ProgramsFaq = (props) => {
                           />
                         </svg>
                       </span>
-                      <span className="a2a_label">Facebook</span>
+                      {/* <span className="a2a_label">Facebook</span> */}
                     </a>
                     <a
                       className="a2a_button_twitter"
@@ -545,7 +545,7 @@ const ProgramsFaq = (props) => {
                           />
                         </svg>
                       </span>
-                      <span className="a2a_label">Twitter</span>
+                      {/* <span className="a2a_label">Twitter</span> */}
                     </a>
                     <a
                       className="a2a_button_whatsapp"
@@ -572,7 +572,7 @@ const ProgramsFaq = (props) => {
                           />
                         </svg>
                       </span>
-                      <span className="a2a_label">WhatsApp</span>
+                      {/* <span className="a2a_label">WhatsApp</span> */}
                     </a>
                     <a
                       className="a2a_button_facebook_messenger"
@@ -597,7 +597,7 @@ const ProgramsFaq = (props) => {
                           />
                         </svg>
                       </span>
-                      <span className="a2a_label">Messenger</span>
+                      {/* <span className="a2a_label">Messenger</span> */}
                     </a>
                     <a
                       className="a2a_button_reddit"
@@ -622,7 +622,7 @@ const ProgramsFaq = (props) => {
                           />
                         </svg>
                       </span>
-                      <span className="a2a_label">Reddit</span>
+                      {/* <span className="a2a_label">Reddit</span> */}
                     </a>
                     <a
                       className="a2a_button_pinterest"
@@ -647,7 +647,7 @@ const ProgramsFaq = (props) => {
                           />
                         </svg>
                       </span>
-                      <span className="a2a_label">Pinterest</span>
+                      {/* <span className="a2a_label">Pinterest</span> */}
                     </a>
                     <a
                       className="a2a_button_email"
@@ -672,7 +672,7 @@ const ProgramsFaq = (props) => {
                           />
                         </svg>
                       </span>
-                      <span className="a2a_label">Email</span>
+                      {/* <span className="a2a_label">Email</span> */}
                     </a>
                   </span>
                 </p>
