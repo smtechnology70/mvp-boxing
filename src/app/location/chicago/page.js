@@ -338,13 +338,24 @@ const Location = (props) => {
                   </div>
                 </div>
                 <div className="right location_on_google col-12 col-md-8">
-                  <iframe
-                    id="map_canvas"
-                    frameBorder={0}
-                    style={{ border: 0 }}
-                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ9UgfJFPTD4gR6RBLKxyiSmE&key=AIzaSyDPJ387cWKeWvLZTO_6Oiuh7v_rJSGnhq8&zoom=17"
-                    allowFullScreen
-                  />
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      maxWidth: "100%",
+                      overflow: "hidden",
+                    }}
+                  >
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.2868459884385!2d-87.62055742387078!3d41.886687771240844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd353241f48f5%3A0x614aa21c2b4b10e9!2sMVP%20BOXING%2C%20IS%20A%20GLOBAL%20SPORTS%2C%20PROMOTIONAL%20EVENTS%20AND%20TALENT%20MANAGEMENT%20COMPANY!5e0!3m2!1sen!2sin!4v1752077800492!5m2!1sen!2sin"
+                      width="100%"
+                      height="300"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
                 </div>
               </div>
               {/* ends (#location_address) */}
