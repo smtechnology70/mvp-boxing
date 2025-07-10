@@ -65,9 +65,9 @@ const SponsorshipMma = (props) => {
             <img
               className=" ls-is-cached lazyloaded"
               alt="Sponsorships"
-              data-src="https://alimder.com/mvpboxing/public//uploads/serviceimages/image-10.jpg"
+              data-src="/uploads/serviceimages/image-10.jpg"
               style={{ width: "100%", height: "auto" }}
-              src="https://alimder.com/mvpboxing/public//uploads/serviceimages/image-10.jpg"
+              src="/uploads/serviceimages/image-10.jpg"
             />
           </div>
           <p>{`To connect with today's increasingly powerful youth demographic, marketers have to reach them where they

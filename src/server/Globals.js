@@ -1,3 +1,3 @@
 export default {
-  API_BASE_URL: 'https://alimder.com/mvpboxing/public/index.php/api/',
+  API_BASE_URL: "https://mvpboxing.com/mvpadmin/public/index.php/api/",
 };
